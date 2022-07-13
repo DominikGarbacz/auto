@@ -205,7 +205,6 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/bodyStyle">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/GenericallyDependentContinuant"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BodyStyleValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -523,6 +522,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/eventInformation">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Process"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">event information</rdfs:label>
         <skos:definition xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</skos:definition>
@@ -686,6 +686,7 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/gearbox">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/GearboxTypeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">gearbox</rdfs:label>
@@ -846,6 +847,7 @@ Note: This property is symmetric, i.e., if A is incompatible with B, then B is a
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/inspected">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Check"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">inspected</rdfs:label>
         <skos:definition xml:lang="en">This property points to inspections and certifications that the vehicle has undergone.</skos:definition>
@@ -1557,6 +1559,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:label>has unit of measurement</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1771,6 +1774,7 @@ Note: It is recommended to rely on this property only for data originating from 
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/engineName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">engine name</rdfs:label>
@@ -1817,6 +1821,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/gearboxTypeId -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/gearboxTypeId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">gearbox type id</rdfs:label>
         <skos:definition xml:lang="en">The Volkswagen-specific gearbox type ID</skos:definition>
@@ -1827,6 +1832,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasElectricEnergyConsumtion -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasElectricEnergyConsumtion">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has electric energy consumtion</rdfs:label>
         <skos:definition>This property represents the electric energy consumption of a vehicle measured in Wh/km.</skos:definition>
@@ -1837,6 +1843,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasEmissionsReduction -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasEmissionsReduction">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has emissions reduction</rdfs:label>
         <skos:definition>This property represents emissions reduction measured in g/km that a vehicle has, through the implemented innovative technologies.</skos:definition>
@@ -1847,6 +1854,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasEngineCapacity -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasEngineCapacity">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has engine capacity</rdfs:label>
         <skos:definition>This property shows the capacity of the engine of a vehicle measured in cm3</skos:definition>
@@ -1857,6 +1865,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasFuelMode -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasFuelMode">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has fuel mode</rdfs:label>
         <skos:definition>This property represents the fuel mode of a vehicle</skos:definition>
@@ -1867,6 +1876,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasID -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasID">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">has ID</rdfs:label>
@@ -1919,6 +1929,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasOtherAxleWidth -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasOtherAxleWidth">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has other axle width</rdfs:label>
         <skos:definition>This property represents the width of the other steering axle of a vehicle measured in mm.</skos:definition>
@@ -1929,6 +1940,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasSteeringAxleWidth -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasSteeringAxleWidth">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has steering axle width</rdfs:label>
         <skos:definition>This property represents the width of the steering axle of a vehicle measured in mm.</skos:definition>
@@ -1939,7 +1951,8 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasTotalNewRegistrations -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasTotalNewRegistrations">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">has total new registrations</rdfs:label>
         <skos:definition>This property represents the nubmer of total new registration of a vehicle.</skos:definition>
     </owl:DatatypeProperty>
@@ -2036,6 +2049,7 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/marketingName -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/marketingName">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">marketing name</rdfs:label>
         <skos:definition xml:lang="en">The name of the object for marketing purposes</skos:definition>
@@ -2137,7 +2151,7 @@ Typical unit code(s): C62</skos:definition>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">number of drivers</rdfs:label>
         <skos:definition xml:lang="en">The number of people who were/are regularly driving the vehicle in the respective period of time (when attached to uco:OwnershipInfo) or in total (when directly applied to a vso:Vehicle)</skos:definition>
@@ -2650,6 +2664,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/version -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/version">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>version</rdfs:label>
         <skos:definition>This property represents an internal version code of a vehicle.</skos:definition>
