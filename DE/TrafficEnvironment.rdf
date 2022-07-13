@@ -287,7 +287,6 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/angle">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/TrafficSignal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">angle</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -428,14 +427,6 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/opening_hours -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/opening_hours">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/Infrastructure"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/NaturalPlace"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:label>opening hours</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -491,6 +482,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/phone -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/phone">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>phone</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -536,6 +528,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/website -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/website">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label>website</rdfs:label>
     </owl:DatatypeProperty>
     
