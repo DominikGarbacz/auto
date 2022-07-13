@@ -1,31 +1,40 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:auto-ev="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
-     xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
-    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/">
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dct:abstract xml:lang="en">A sophisticated machine understandable map is required for autonomous vehicles to perceive driving environments. Therefore, we construct a map ontology.</dct:abstract>
-        <dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
-        <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
-        <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
-        <sm:fileAbbreviation>auto-de-map</sm:fileAbbreviation>
-        <sm:filename>Map.rdf</sm:filename>
-        <rdfs:comment xml:lang="en">The traffic environment ontology (TE) provides a model for traffic infrastructure. 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-ev "https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/">
+	<!ENTITY auto-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos#">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY swrl "http://www.w3.org/2003/11/swrl#">
+	<!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
+	xmlns:auto-ev="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
+	xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+	xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/">
+		<rdfs:label xml:lang="en">Traffic environment ontology (TE)</rdfs:label>
+		<rdfs:comment xml:lang="en">The traffic environment ontology (TE) provides a model for traffic infrastructure. 
 
 			It contains many classes and properties extracted from: Map Ontology created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project.</rdfs:comment>
 		<dct:abstract xml:lang="en">A sophisticated machine understandable map is required for autonomous vehicles to perceive driving environments. Therefore, we construct a map ontology.</dct:abstract>
@@ -1011,3 +1020,4 @@
 		<rdfs:label>website</rdfs:label>
 	</owl:DatatypeProperty>
 
+</rdf:RDF>

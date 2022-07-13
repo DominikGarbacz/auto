@@ -1,28 +1,44 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://creativecommons.org/ns#"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-     xmlns:auto-ti="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
-     xmlns:auto-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:VechicleECommerce="https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/">
-    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/">
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <terms:abstract xml:lang="en">The Traffic Incident Ontology (TI) is an ontology for traffic incidents.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY VechicleECommerce "https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/">
+	<!ENTITY auto-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+	<!ENTITY auto-ti "https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/">
+	<!ENTITY auto-vc "https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+	<!ENTITY ns "http://creativecommons.org/ns#">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY terms "http://purl.org/dc/terms/">
+	<!ENTITY vann "http://purl.org/vocab/vann/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
+	xmlns:VechicleECommerce="https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/"
+	xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:auto-ti="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
+	xmlns:auto-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:ns="http://creativecommons.org/ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:terms="http://purl.org/dc/terms/"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/">
+		<rdfs:label>Traffic incident ontology (TI)</rdfs:label>
+		<terms:abstract xml:lang="en">The Traffic Incident Ontology (TI) is an ontology for traffic incidents.
 
 In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AMERICAN NATIONAL STANDARD, ANSI D.16-2017).</terms:abstract>
 		<terms:creator>Piotr Kulicki</terms:creator>
@@ -1117,3 +1133,4 @@ The total number of lanes in a roadway is collected for each vehicle, on the roa
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:DatatypeProperty>
 
+</rdf:RDF>

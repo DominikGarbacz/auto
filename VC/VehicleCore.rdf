@@ -1,29 +1,45 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://creativecommons.org/ns#"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfa="http://www.w3.org/ns/rdfa#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dctype="http://purl.org/dc/dcmitype/"
-     xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-     xmlns:auto-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
-    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/">
-        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dc:contributor>Robert Trypuz</dc:contributor>
-        <dct:abstract xml:lang="en">The Vehicle Core (VC) module focuses on the core concepts related to vehicles&apos; types, structure and configuration.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+	<!ENTITY auto-vc "https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY dctype "http://purl.org/dc/dcmitype/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+	<!ENTITY ns "http://creativecommons.org/ns#">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfa "http://www.w3.org/ns/rdfa#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY vann "http://purl.org/vocab/vann/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
+	xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:auto-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dctype="http://purl.org/dc/dcmitype/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:ns="http://creativecommons.org/ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/">
+		<rdfs:label>Vehicle core ontology (VC)</rdfs:label>
+		<dc:contributor>Robert Trypuz</dc:contributor>
+		<dct:abstract xml:lang="en">The Vehicle Core (VC) module focuses on the core concepts related to vehicles&apos; types, structure and configuration.
 
 It contains many classes and properties extracted from:
 - the automotive extension of schema.org (https://schema.org/docs/automotive.html). 
@@ -783,16 +799,174 @@ Example: Engine 1.6 l TDI, color ocean blue, trailer hitch</skos:definition>
 While a Complete Car Model can be defined indepently of a Base Model, Trim, or Derivative, it is usually based on a Derivative plus choices for all mandatory configurational options (coo:SpecItemCollection) of that Derivative.
 A Complete Car Model should be linked to its Derivative via gr:isVariantOf, if available.
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+Example: VW Golf S 1.6 TDI 3door Manual in ocean blue with air-conditioning, CD player, trailer hitch, power steering, and power windows
 
-    
+Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature description of one or multiple actual cars.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;ConfigurationInfo">
+		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;featureOverride"/>
+				<owl:onClass rdf:resource="&auto-vc;PropertySpecification"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;valid"/>
+				<owl:onDataRange rdf:resource="&xsd;boolean"/>
+				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;includesChoices"/>
+				<owl:someValuesFrom rdf:resource="&auto-vc;ChoiceOrComponent"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">configuration info</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<owl:disjointWith rdf:resource="&auto-vc;Derivative"/>
+		<owl:disjointWith rdf:resource="&auto-vc;PropertySpecification"/>
+		<owl:disjointWith rdf:resource="&auto-vc;SpecItemCollection"/>
+		<owl:disjointWith rdf:resource="&auto-vc;Trim"/>
+		<skos:definition xml:lang="en">A Configuration Info is an abstract entity that gives information on whether a set of Choices Or Components results in a valid configuration. 
+Using coo:compatible, it is possible to indicate either compatibility (true) and incompatibility (false) so that modeling remains efficient, no matter whether most combinations are valid or whether most configurations are invalid.
+If no such statement is found, the validity of a configuration is unknown.
 
+Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceOrComponent, may contain additional information on the validity of configuration.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;DamageOrAccident">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;carriedOutBy"/>
+				<owl:onClass>
+					<owl:Class>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-vc;BusinessEntity">
+							</rdf:Description>
+							<rdf:Description rdf:about="&auto-vc;BusinessEntityType">
+							</rdf:Description>
+						</owl:unionOf>
+					</owl:Class>
+				</owl:onClass>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;airbagDeployment"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;boolean"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;notAtFaultAccident"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;boolean"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;originalPartsOnly"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;boolean"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;repaired"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;boolean"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;structuralDamage"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;boolean"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">damage or accident</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<skos:definition xml:lang="en">an event in which the vehicle is being damaged</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;DecorativeTrims">
+		<rdfs:subClassOf rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<rdfs:label xml:lang="en">decorative trims choice or component</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<skos:definition xml:lang="en">The class of decorative trim choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 8</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;Derivative">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Model"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-vc;capCode"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-vc;capCode"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-vc;dhCode"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-vc;dhCode"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;hasCompleteCarModel"/>
+				<owl:onClass rdf:resource="&auto-vc;CompleteCarModel"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;compatibility"/>
+				<owl:onClass rdf:resource="&auto-vc;ConfigurationInfo"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc;hasSpecItems"/>
+				<owl:onClass rdf:resource="&auto-vc;SpecItemCollection"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">derivative</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<owl:disjointWith rdf:resource="&auto-vc;PropertySpecification"/>
+		<owl:disjointWith rdf:resource="&auto-vc;SpecItemCollection"/>
+		<owl:disjointWith rdf:resource="&auto-vc;Trim"/>
+		<skos:definition xml:lang="en">A Derivative is an abstract entity specifying (1) the basic features plus (2) a set of functional (e.g. engine type) and non-functional configuration (e.g. upholstery) choices of a group of vehicles.
+A Derivative has often a number of remaining configuration choices (coo:SpecItemCollection attached via coo:hasSpecItems), which will determine the actual properties of the resulting vehicle.    
+A Derivative should be linked to its Trim via gr:isVariantOf, if available.
 
 Examples: VW Golf S 1.6 TDI 3door Manual</skos:definition>
 	</owl:Class>
@@ -831,8 +1005,7 @@ Examples: VW Golf S 1.6 TDI 3door Manual</skos:definition>
   http://dbpedia.org/resource/Super_Ultra_Low_Emission_Vehicle
   http://dbpedia.org/resource/Partial_zero-emissions_vehicle
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
-    
+See also http://en.wikipedia.org/wiki/Emissions_standard.
 
 Unfortunately, there are no DBPedia identifiers for the popular Euro 1 - Euro 5 standards available.
 If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:EmissionStandardValue.</rdfs:comment>
@@ -2879,47 +3052,83 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
 &lt;ul&gt;
 &lt;li&gt;Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use &quot;SEC&quot; for seconds and indicate the velocities in the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/name&quot;&gt;name&lt;/a&gt; of the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QuantitativeValue&quot;&gt;QuantitativeValue&lt;/a&gt;, or use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt; with a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QuantitativeValue&quot;&gt;QuantitativeValue&lt;/a&gt; of 0..60 mph or 0..100 km/h to specify the reference speeds.&lt;/li&gt;
 &lt;/ul&gt;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/advancedPayment -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/advancedPayment">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">advanced payment</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the advanced payment for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/availableChoice -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/availableChoice">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/SpecItemCollection"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">available choice</rdfs:label>
-        <skos:definition xml:lang="en">This property links available Choices or Components to a Spec Item.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/bodyStyle -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/bodyStyle">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BodyStyleValue"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">body style</rdfs:label>
-        <rdfs:label xml:lang="en">body type</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Car_body_styles"/>
-        <skos:definition>Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).</skos:definition>
-        <skos:definition xml:lang="en">Indicates the design and body style of the vehicle. 
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;acrissCode">
+		<rdfs:label xml:lang="en">acriss code</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;MotorizedRoadVehicle"/>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;Bus">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;Car">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/ACRISS_Car_Classification_Code"/>
+		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/ACRISS_Car_Classification_Code"/>
+		<skos:definition xml:lang="en">The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.</skos:definition>
+		<skos:definition>The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;advancedPayment">
+		<rdfs:label xml:lang="en">advanced payment</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the advanced payment for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;airbagDeployment">
+		<rdfs:label xml:lang="en">airbag deployment</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;DamageOrAccident">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;Vehicle">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<skos:definition xml:lang="en">This property indicates whether at least one of the airbags of the vehicle has been deployed in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle).</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;apr">
+		<rdfs:label xml:lang="en">apr</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
+		<skos:definition xml:lang="en">Annual percentage rate. Note: 7.5 % is encoded as &quot;7.5&quot;^^xsd:decimal, not &quot;0.075&quot;^^xsd:decimal.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;availableChoice">
+		<rdfs:label xml:lang="en">available choice</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;SpecItemCollection"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<skos:definition xml:lang="en">This property links available Choices or Components to a Spec Item.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;bodyStyle">
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+		<rdfs:label xml:lang="en">body style</rdfs:label>
+		<rdfs:label xml:lang="en">body type</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&auto-vc;BodyStyleValue"/>
+		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Car_body_styles"/>
+		<skos:definition>Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).</skos:definition>
+		<skos:definition xml:lang="en">Indicates the design and body style of the vehicle. 
 
 Use DBPedia resources to indicate the features, if possible. Popular identifiers are
   http://dbpedia.org/resource/Convertible
@@ -2931,263 +3140,305 @@ Use DBPedia resources to indicate the features, if possible. Popular identifiers
 See also http://en.wikipedia.org/wiki/Car_body_styles.
 
 If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:BodyStyleValue.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">cargo volume</rdfs:label>
-        <skos:definition>The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;capCode">
+		<rdfs:label xml:lang="en">cap code</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Derivative"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The CAP code</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;cargoVolume">
+		<rdfs:label xml:lang="en">cargo volume</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.
 
 Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
 
 Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/carriedOutBy -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/carriedOutBy">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Check"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/DamageOrAccident"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ModificationOrMaintenance"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntity"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntityType"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">carried out by</rdfs:label>
-        <skos:definition xml:lang="en">The business or type of business that carried out the check, repair, maintenance, or modification</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/compatibility -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/compatibility">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Derivative"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ConfigurationInfo"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">compatibility</rdfs:label>
-        <skos:definition xml:lang="en">Links from a Derivative to information on whether a particular configuration is valid (true) or invalid (false)</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/compatibleWith -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/compatibleWith">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">compatible with</rdfs:label>
-        <skos:definition xml:lang="en">Indicates that two Choices or Components are compatible with each other.
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;carriedOutBy">
+		<rdfs:label xml:lang="en">carried out by</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;Check">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;DamageOrAccident">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;ModificationOrMaintenance">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;BusinessEntity">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;BusinessEntityType">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:range>
+		<skos:definition xml:lang="en">The business or type of business that carried out the check, repair, maintenance, or modification</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;color">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:label xml:lang="en">color</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<skos:definition xml:lang="en">The color of the vehicle</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;compatibility">
+		<rdfs:label xml:lang="en">compatibility</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Derivative"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ConfigurationInfo"/>
+		<skos:definition xml:lang="en">Links from a Derivative to information on whether a particular configuration is valid (true) or invalid (false)</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;compatibleWith">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+		<rdfs:label xml:lang="en">compatible with</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<skos:definition xml:lang="en">Indicates that two Choices or Components are compatible with each other.
 
 Note: This property is symmetric, i.e., if A is compatible with B, then B is also compatible with A.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/contains -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/contains">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">contains</rdfs:label>
-        <skos:definition xml:lang="en">A naive part-whole relation that allows providing more granular uco:OwnershipInfo data for a part of the duration of the ownership</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/credit -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/credit">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">credit</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the credit for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/currentLocation -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/currentLocation">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">current location</rdfs:label>
-        <skos:definition xml:lang="en">The current location of the vehicle, i.e. where the car could be tested. For indicating alternative locations to which the seller is willing to bring the car, use gr:availableAtOrFrom attached to the gr:Offering, since those are aspects of the offer, not of the vehicle.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/currentOwner -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/currentOwner">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/owner"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntity"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">current owner</rdfs:label>
-        <skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/customerCashPrice -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/customerCashPrice">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">customer cash price</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the customer cash price for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/customerDeposit -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/customerDeposit">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">customer deposit</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the customer deposit for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/default -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/default">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/availableChoice"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/SpecItemCollection"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">default</rdfs:label>
-        <skos:definition xml:lang="en">This property links the default Choice or Component to a Spec Item. 
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;condition">
+		<rdfs:label xml:lang="en">condition</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<skos:definition xml:lang="en">A textual description of the condition of the vehicle. This property should be mainly used with gr:ActualProductOrServiceInstance.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;contains">
+		<rdfs:label xml:lang="en">contains</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;OwnershipInfo"/>
+		<skos:definition xml:lang="en">A naive part-whole relation that allows providing more granular uco:OwnershipInfo data for a part of the duration of the ownership</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;countryOfOrigin">
+		<rdfs:label xml:lang="en">country of origin</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The country or geo-political region in which the vehicle was initially sold officially, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;countryOfRegistration">
+		<rdfs:label xml:lang="en">country of registration</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The country or geo-political region in which the vehicle is currently registered, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;credit">
+		<rdfs:label xml:lang="en">credit</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the credit for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;currentLocation">
+		<rdfs:label xml:lang="en">current location</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;Location"/>
+		<rdfs:range rdf:resource="&auto-mo;PostalAddress"/>
+		<skos:definition xml:lang="en">The current location of the vehicle, i.e. where the car could be tested. For indicating alternative locations to which the seller is willing to bring the car, use gr:availableAtOrFrom attached to the gr:Offering, since those are aspects of the offer, not of the vehicle.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;currentOwner">
+		<rdfs:subPropertyOf rdf:resource="&auto-vc;owner"/>
+		<rdfs:label xml:lang="en">current owner</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;BusinessEntity"/>
+		<skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;customerCashPrice">
+		<rdfs:label xml:lang="en">customer cash price</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the customer cash price for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;customerDeposit">
+		<rdfs:label xml:lang="en">customer deposit</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the customer deposit for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;cylinderTypeId">
+		<rdfs:label xml:lang="en">cylinder type id</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The Volkswagen-specific identifier for the cylinder type of a vehicle or engine</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;dateLaunched">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:label xml:lang="en">date launched</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+		<skos:definition xml:lang="en">The date of the official launch of the car model</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;dateVehicleFirstRegistered">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:label xml:lang="en">date vehicle first registered</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+		<skos:definition>The date of the first registration of the vehicle with the respective public authorities.</skos:definition>
+		<skos:definition xml:lang="en">The date of the first registration of the vehicle with the respective public authorities. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;default">
+		<rdfs:subPropertyOf rdf:resource="&auto-vc;availableChoice"/>
+		<rdfs:label xml:lang="en">default</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;SpecItemCollection"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<skos:definition xml:lang="en">This property links the default Choice or Component to a Spec Item. 
 Since it is defined a sub-property of coo:availableChoice, the default choice is automatically part of the available choices.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/dependsOn -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/dependsOn">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">depends on</rdfs:label>
-        <skos:definition xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components required for that choice  
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;dependsOn">
+		<rdfs:label xml:lang="en">depends on</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<skos:definition xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components required for that choice  
 
 Note: This property is transitive, i.e., if B is required by A and C and D are required by B, then C and D are also required by A.</skos:definition>
-    </owl:ObjectProperty>
-    
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;depositContribution">
+		<rdfs:label xml:lang="en">deposit contribution</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the deposit contribution for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;dhCode">
+		<rdfs:label xml:lang="en">dh code</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Derivative"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The DH code</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;discount">
+		<rdfs:label xml:lang="en">discount</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the discount for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;displayPos">
+		<rdfs:label xml:lang="en">display position</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;int"/>
+		<skos:definition xml:lang="en">The position at which the option or element should be listed in a menu or user dialog, lower numbers come first.
+The main usage of this property are coo:SpecItemCollection and coo:ChoiceOrComponent, but it is possible to apply it to any owl:Class.
 
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/depositContribution -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/depositContribution">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">deposit contribution</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the deposit contribution for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/discount -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/discount">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">discount</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the discount for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/driveWheelConfiguration -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/driveWheelConfiguration">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/DriveWheelConfigurationValue"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">drive wheel configuration</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Drive_wheel"/>
-        <skos:definition xml:lang="en">The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain</skos:definition>
-        <skos:definition>The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/driver -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/driver">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">driver</rdfs:label>
-        <skos:definition xml:lang="en">This property points to the driver or drivers that were regularly driving the vehicle during the respective period of time (when attached to uco:OwnershipInfo) or in total (when attached directly to a vso:Vehicle).</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/engineDisplacement -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/engineDisplacement">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/EngineSpecification"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">engine displacement</rdfs:label>
-        <skos:definition>The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. &lt;br/&gt;&lt;br/&gt;
+Note: It is recommended to rely on this property only for data originating from a single RDF graph; otherwise, unpredictable results are possible.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;driveWheelConfiguration">
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+		<rdfs:label xml:lang="en">drive wheel configuration</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&auto-vc;DriveWheelConfigurationValue"/>
+		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Drive_wheel"/>
+		<skos:definition xml:lang="en">The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain</skos:definition>
+		<skos:definition>The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;driver">
+		<rdfs:label xml:lang="en">driver</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;Person"/>
+		<skos:definition xml:lang="en">This property points to the driver or drivers that were regularly driving the vehicle during the respective period of time (when attached to uco:OwnershipInfo) or in total (when attached directly to a vso:Vehicle).</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;emissionsCO2">
+		<rdfs:label xml:lang="en">emissions CO2</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:range rdf:resource="&xsd;float"/>
+		<skos:definition>The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put &quot;g/km&quot; into the unitText property of that value, since there is no UN/CEFACT Common Code for &quot;g/km&quot;.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;emissionsPerPassenger">
+		<rdfs:label xml:lang="en">emissions per passenger</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;engineDisplacement">
+		<rdfs:label xml:lang="en">engine displacement</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;EngineSpecification"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. &lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches
 * Note 1: You can link to information about how the given value has been determined using the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt; property.
 * Note 2: You can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/enginePower -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/enginePower">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/EngineSpecification"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">engine power</rdfs:label>
-        <skos:definition>The power of the vehicle&apos;s engine.
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;engineName">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:label xml:lang="en">engine name</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<skos:definition xml:lang="en">A short text indicating the engine(s) of the vehicle</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;enginePower">
+		<rdfs:label xml:lang="en">engine power</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;EngineSpecification"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The power of the vehicle&apos;s engine.
     Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)&lt;br/&gt;&lt;br/&gt;
 
 &lt;ul&gt;
@@ -3195,23 +3446,19 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
 &lt;li&gt;Note 2: You can link to information about how the given value has been determined using the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt; property.&lt;/li&gt;
 &lt;li&gt;Note 3: You can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.&lt;/li&gt;
 &lt;/ul&gt;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/engineType -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/engineType">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/EngineSpecification"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/EngineTypeValue"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label>engine type</rdfs:label>
-        <rdfs:label xml:lang="en">engine type</rdfs:label>
-        <skos:definition>The type of engine or engines powering the vehicle.</skos:definition>
-        <skos:definition xml:lang="en">The type of engine or engines powering the vehicle. If there are multiple engines, simply attach this property multiple times.
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;engineType">
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+		<rdfs:label xml:lang="en">engine type</rdfs:label>
+		<rdfs:label>engine type</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;EngineSpecification"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&auto-vc;EngineTypeValue"/>
+		<skos:definition>The type of engine or engines powering the vehicle.</skos:definition>
+		<skos:definition xml:lang="en">The type of engine or engines powering the vehicle. If there are multiple engines, simply attach this property multiple times.
 
 Use DBPedia resources to indicate the engine type. Popular identifiers are
   http://dbpedia.org/resource/Two-stroke_engine
@@ -3220,45 +3467,33 @@ Use DBPedia resources to indicate the engine type. Popular identifiers are
   http://dbpedia.org/resource/Electric_motor
 
 If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:EngineTypeValue.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/eventInformation -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/eventInformation">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">event information</rdfs:label>
-        <skos:definition xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/excessMileage -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/excessMileage">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">excess mileage</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the rate for excess mileage</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/feature -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/feature">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">feature</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Category:Automotive_accessories"/>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Category:Automotive_accessories"/>
-        <skos:definition xml:lang="en">Indicates a built-in feature, accessory, or component of the vehicle.
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;eventInformation">
+		<rdfs:label xml:lang="en">event information</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<skos:definition xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;excessMileage">
+		<rdfs:label xml:lang="en">excess mileage</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the rate for excess mileage</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;feature">
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+		<rdfs:label xml:lang="en">feature</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&auto-mo;PropertyValue"/>
+		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Category:Automotive_accessories"/>
+		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Category:Automotive_accessories"/>
+		<skos:definition xml:lang="en">Indicates a built-in feature, accessory, or component of the vehicle.
 
 Use DBPedia resources to indicate the features, if possible. Popular identifiers are
   http://dbpedia.org/resource/Anti-lock_braking_system
@@ -3277,84 +3512,82 @@ Use DBPedia resources to indicate the features, if possible. Popular identifiers
 See also http://en.wikipedia.org/wiki/Category:Automotive_accessories.
 
 If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:FeatureValue.</skos:definition>
-        <skos:definition xml:lang="en">This property points to vehicle features in a semi-structured property-value form.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/featureOverride -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/featureOverride">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ConfigurationInfo"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PropertySpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">feature override</rdfs:label>
-        <skos:definition xml:lang="en">Links a coo:ConfigurationInfo node to information on how a choice or component or the combination of multiple choices will override the regular properties of the resulting vehicle</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/finalPaymentFee -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/finalPaymentFee">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">final payment fee</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the final payment fee for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/firstMonthlyPaymentFee -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/firstMonthlyPaymentFee">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">first monthly payment fee</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the first monthly payment fee for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/fuelCapacity -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/fuelCapacity">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">fuel capacity</rdfs:label>
-        <skos:definition>The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.&lt;br/&gt;&lt;br/&gt;
+		<skos:definition xml:lang="en">This property points to vehicle features in a semi-structured property-value form.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;featureOverride">
+		<rdfs:label xml:lang="en">feature override</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;ChoiceOrComponent">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;ConfigurationInfo">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PropertySpecification"/>
+		<skos:definition xml:lang="en">Links a coo:ConfigurationInfo node to information on how a choice or component or the combination of multiple choices will override the regular properties of the resulting vehicle</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;finalPayment">
+		<rdfs:label xml:lang="en">final payment</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
+		<skos:definition xml:lang="en">Indicates the final payment for the financing</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;finalPaymentFee">
+		<rdfs:label xml:lang="en">final payment fee</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the final payment fee for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;firstMonthlyPaymentFee">
+		<rdfs:label xml:lang="en">first monthly payment fee</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the first monthly payment fee for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;from">
+		<rdfs:label xml:lang="en">from</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+		<skos:definition xml:lang="en">This property indicates the beginning of the period of ownership represented by this uco:OwnershipInfo node.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;fuelCapacity">
+		<rdfs:label xml:lang="en">fuel capacity</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/fuelConsumption -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/fuelConsumption">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">fuel consumption</rdfs:label>
-        <rdfs:label xml:lang="en">fuel efficiency</rdfs:label>
-        <skos:definition>The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;fuelConsumption">
+		<rdfs:label xml:lang="en">fuel consumption</rdfs:label>
+		<rdfs:label xml:lang="en">fuel efficiency</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).
 
 Note 1: There are unfortunately no standard unit codes for liters per 100 km. Use unitText to indicate the unit of measurement, e.g. L/100 km.
 Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.
 Note 3: Often, the absolute value is useful only when related to driving speed (&quot;at 80 km/h&quot;) or usage pattern (&quot;city traffic&quot;). You can use valueReference to link the value for the fuel consumption to another value.</skos:definition>
-        <skos:definition>The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).
+		<skos:definition>The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).
 
 Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use unitText to indicate the unit of measurement, e.g. mpg or km/L.
 Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.
@@ -3539,130 +3772,139 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
 		<skos:definition xml:lang="en">The outer height of the vehicle. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/heightOpenTailgate -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/heightOpenTailgate">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">height open bonnet</rdfs:label>
-        <rdfs:label xml:lang="en">height open tailgate</rdfs:label>
-        <skos:definition xml:lang="en">The outer height of the vehicle with the tailgate open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;heightOpenTailgate">
+		<rdfs:label xml:lang="en">height open bonnet</rdfs:label>
+		<rdfs:label xml:lang="en">height open tailgate</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
+		<skos:definition xml:lang="en">The outer height of the vehicle with the tailgate open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/includes -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/includes">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">includes</rdfs:label>
-        <skos:definition xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components implicity contained
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;includes">
+		<rdfs:label xml:lang="en">includes</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<skos:definition xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components implicity contained
 
 Note: This property is transitive, i.e., if B is included in A and C and D are included in B, then C and D are also included in A.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/includesChoices -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/includesChoices">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ConfigurationInfo"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">includes choices</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the set of Choices Or Components to which the Configuration Info node refers
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;includesChoices">
+		<rdfs:label xml:lang="en">includes choices</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ConfigurationInfo"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<skos:definition xml:lang="en">Indicates the set of Choices Or Components to which the Configuration Info node refers
 
 Note 1: Complementing compatibility information can be attached to the components directly via coo:compatibleWith, coo:incompatibleWith, coo:dependsOn, and coo:includes.
 Note 2: The coo:ConfigurationInfo node makes only a valid statement for a configuration that includes ALL of the Choices or Components attached via this property. 
 Note 3: If you want to know whether further components can be added, check that there are no coo:incompatibleWith relationships with any Choice or Component. This check must also be extended to all Choices or Components implicitly included via coo:includes.
 Note 4: If you want to know whether some components may be omitted without invalidating the configuration, check that there are no coo:dependsOn relationships with any Choice or Component. This check must also be extended to all Choices Or Components implicitly included via coo:includes.
 Note 5: Under an Open World Assumption (OWA), only an explicit compatibility statement for your configuration is really reliable. A weaker guarantee may be sufficient for your application, though.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/incompatibleWith -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/incompatibleWith">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">incompatible with</rdfs:label>
-        <skos:definition xml:lang="en">Indicates that two Choices or Components are incompatible with each other, independent from other choices.
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;incompatibleWith">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+		<rdfs:label xml:lang="en">incompatible with</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
+		<skos:definition xml:lang="en">Indicates that two Choices or Components are incompatible with each other, independent from other choices.
 
 Note: This property is symmetric, i.e., if A is incompatible with B, then B is also incompatible with A.</skos:definition>
-    </owl:ObjectProperty>
-    
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;indicationOfOdometerRollback">
+		<rdfs:label xml:lang="en">indication of odometer rollback</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<skos:definition xml:lang="en">This property indicates whether it is likely or known that the odometer of the vehicle does not properly reflect the total mileage of the vehicle, e.g. because the odometer has been replaced, reset, or tampered with</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;inspected">
+		<rdfs:label xml:lang="en">inspected</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<skos:definition xml:lang="en">This property points to inspections and certifications that the vehicle has undergone.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;insuranceGroup">
+		<rdfs:label xml:lang="en">insurance group</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;MotorizedRoadVehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The insurance group code</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;insuranceGroup50">
+		<rdfs:label xml:lang="en">insurance group 50</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;MotorizedRoadVehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The insurance group 50 code</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;knownVehicleDamages">
+		<rdfs:label xml:lang="en">known vehicle damages</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition>A textual description of known damages, both repaired and unrepaired.</skos:definition>
+		<skos:definition xml:lang="en">A textual description of known damages, both repaired and unrepaired.
 
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/inspected -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/inspected">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">inspected</rdfs:label>
-        <skos:definition xml:lang="en">This property points to inspections and certifications that the vehicle has undergone.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/length -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/length">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">length</rdfs:label>
-        <skos:definition xml:lang="en">The outer length of the vehicle. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
+Note: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;length">
+		<rdfs:label xml:lang="en">length</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition xml:lang="en">The outer length of the vehicle. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/listPrice -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/listPrice">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">list price</rdfs:label>
-        <skos:definition xml:lang="en">The original list price of the new car at the time of production</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/luggageCapacitySeatsFolded -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/luggageCapacitySeatsFolded">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">luggage capacity seats folded</rdfs:label>
-        <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats folded
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;licensePlate">
+		<rdfs:label xml:lang="en">license plate</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The license plate string(s) assigned to the vehicle during the period of ownership</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;listPrice">
+		<rdfs:label xml:lang="en">list price</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">The original list price of the new car at the time of production</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;luggageCapacitySeatsFolded">
+		<rdfs:subPropertyOf rdf:resource="&auto-vc;cargoVolume"/>
+		<rdfs:label xml:lang="en">luggage capacity seats folded</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
+		<skos:definition xml:lang="en">The available volume for cargo or luggage with the seats folded
 Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
   
 Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/luggageCapacitySeatsUpright -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/luggageCapacitySeatsUpright">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">luggage capacity seats upright</rdfs:label>
-        <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats upright
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;luggageCapacitySeatsUpright">
+		<rdfs:subPropertyOf rdf:resource="&auto-vc;cargoVolume"/>
+		<rdfs:label xml:lang="en">luggage capacity seats upright</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
+		<skos:definition xml:lang="en">The available volume for cargo or luggage with the seats upright
 Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
   
 Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
@@ -3719,157 +3961,248 @@ See also http://en.wikipedia.org/wiki/Emissions_standard.
 
 Unfortunately, there are no DBPedia identifiers for the popular Euro 1 - Euro 5 standards available.
 If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:EmissionStandardValue.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileage -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileage">
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">mileage</rdfs:label>
-        <skos:definition xml:lang="en">The mileage of the vehicle at the event, e.g. at the accident, maintenance, check, or modification. 
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;mileage">
+		<rdfs:label xml:lang="en">mileage</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
+		<skos:definition xml:lang="en">The mileage of the vehicle at the event, e.g. at the accident, maintenance, check, or modification. 
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileageEnd -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileageEnd">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">mileage end</rdfs:label>
-        <skos:definition xml:lang="en">The mileage of the vehicle at the end of the period of ownership. 
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;mileageEnd">
+		<rdfs:label xml:lang="en">mileage end</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
+		<skos:definition xml:lang="en">The mileage of the vehicle at the end of the period of ownership. 
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileageFromOdometer -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileageFromOdometer">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">mileage from odometer</rdfs:label>
-        <skos:definition>The total distance travelled by the particular vehicle since its initial production, as read from its odometer.
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;mileageFromOdometer">
+		<rdfs:label xml:lang="en">mileage from odometer</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The total distance travelled by the particular vehicle since its initial production, as read from its odometer.
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileageInitial -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/mileageInitial">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">mileage initial</rdfs:label>
-        <skos:definition xml:lang="en">The mileage of the vehicle at the beginning of the period of ownership. 
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;mileageInitial">
+		<rdfs:label xml:lang="en">mileage initial</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
+		<skos:definition xml:lang="en">The mileage of the vehicle at the beginning of the period of ownership. 
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/monthlyPayment -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/monthlyPayment">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">monthly payment</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the monthly payment for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/numberOfAxles -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/numberOfAxles">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">number of axles</rdfs:label>
-        <skos:definition>The number of axles.
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;min">
+		<rdfs:label xml:lang="en">min</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;SpecItemCollection"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;int"/>
+		<skos:definition xml:lang="en">The minimum number of coo:ChoiceOrComponent entities that must be selected for a valid configuration</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;monthlyPayment">
+		<rdfs:label xml:lang="en">monthly payment</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the monthly payment for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;noOfMonthlyPayments">
+		<rdfs:label xml:lang="en">number of monthly payments</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
+		<skos:definition xml:lang="en">The number of monthly payments</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;notAtFaultAccident">
+		<rdfs:label xml:lang="en">not-at-fault accident</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;DamageOrAccident"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<skos:definition xml:lang="en">This property indicates whether the accident leading to the damage was a not-at-fault accident from the perspective of the owner.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;numberOfAirbags">
+		<rdfs:label xml:lang="en">number of airbags</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range>
+			<rdfs:Datatype>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&xsd;decimal">
+					</rdf:Description>
+					<rdf:Description rdf:about="&xsd;string">
+					</rdf:Description>
+				</owl:unionOf>
+			</rdfs:Datatype>
+		</rdfs:range>
+		<skos:definition>The number or type of airbags in the vehicle.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;numberOfAxles">
+		<rdfs:label xml:lang="en">number of axles</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueInteger"/>
+		<skos:definition>The number of axles.
 
 Typical unit code(s): C62</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/numberOfForwardGears -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/numberOfForwardGears">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">number of forward gears</rdfs:label>
-        <skos:definition>The total number of forward gears available for the transmission system of the vehicle.
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;numberOfDoors">
+		<rdfs:label xml:lang="en">number of doors</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
+		<skos:definition>The number of doors.
 
 Typical unit code(s): C62</skos:definition>
-    </owl:ObjectProperty>
-    
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;numberOfDrivers">
+		<rdfs:label xml:lang="en">number of drivers</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;OwnershipInfo">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;Vehicle">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;integer"/>
+		<skos:definition xml:lang="en">The number of people who were/are regularly driving the vehicle in the respective period of time (when attached to uco:OwnershipInfo) or in total (when directly applied to a vso:Vehicle)</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;numberOfForwardGears">
+		<rdfs:label xml:lang="en">number of forward gears</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueInteger"/>
+		<skos:definition>The total number of forward gears available for the transmission system of the vehicle.
 
+Typical unit code(s): C62</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;numberOfOwners">
+		<rdfs:label xml:lang="en">number of owners</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;integer"/>
+		<skos:definition xml:lang="en">The total number of people or organizations who owned the vehicle, including the current owner.
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/otrRetailPrice -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/otrRetailPrice">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">otr retail price</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the OTR retail price for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/owner -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/owner">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntity"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">owner</rdfs:label>
-        <skos:definition xml:lang="en">This property points to the owner of the vehicle for the respective period of time, as indicated by the uco:OwnershipInfo node.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/parking -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/parking">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ParkingType"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">parking</rdfs:label>
-        <skos:definition xml:lang="en">The main type(s) of parking that have been used for the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/payload -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/payload">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">payload</rdfs:label>
-        <skos:definition>The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.&lt;br/&gt;&lt;br/&gt;
+Note that this value can be higher (but not lower) than the number of uco:OwnershipInfo nodes, since those records may be incomplete.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;numberOfPassengers">
+		<rdfs:label xml:lang="en">has number of passengers</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&xsd;int"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;offerPromoCode">
+		<rdfs:label xml:lang="en">offer promo code</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Offering"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<skos:definition xml:lang="en">The code for a promotional offer</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;originalPartsOnly">
+		<rdfs:label xml:lang="en">original parts only</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;DamageOrAccident">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;ModificationOrMaintenance">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<skos:definition xml:lang="en">This indicates whether the parts used for repairing a damage, for a maintenance task, or a modification were all original.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;otrRetailPrice">
+		<rdfs:label xml:lang="en">otr retail price</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the OTR retail price for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;owner">
+		<rdfs:label xml:lang="en">owner</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;Organization"/>
+		<rdfs:range rdf:resource="&auto-mo;Person"/>
+		<rdfs:range rdf:resource="&auto-vc;BusinessEntity"/>
+		<skos:definition xml:lang="en">This property points to the owner of the vehicle for the respective period of time, as indicated by the uco:OwnershipInfo node.</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;parking">
+		<rdfs:label xml:lang="en">parking</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;ParkingType"/>
+		<skos:definition xml:lang="en">The main type(s) of parking that have been used for the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;partAdded">
+		<rdfs:label xml:lang="en">part added</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ModificationOrMaintenance"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<skos:definition xml:lang="en">A textual description of the part or parts added in the modification (e.g. tuning) or maintenance task</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;partRemoved">
+		<rdfs:label xml:lang="en">part removed</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ModificationOrMaintenance"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<skos:definition xml:lang="en">A textual description of the part or parts removed in the modification (e.g. tuning) or maintenance task</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;partReplaced">
+		<rdfs:label xml:lang="en">part replaced</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;ModificationOrMaintenance"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<skos:definition xml:lang="en">A textual description of the part or parts replaced in the modification (e.g. tuning) or maintenance (e.g. new engine) task</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;payload">
+		<rdfs:label xml:lang="en">payload</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 
@@ -3879,32 +4212,24 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 &lt;li&gt;Note 3: You may also link to a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QualitativeValue&quot;&gt;QualitativeValue&lt;/a&gt; node that provides additional information using &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Note 4: Note that you can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.&lt;/li&gt;
 &lt;/ul&gt;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/pets -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/pets">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Species"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">pets</rdfs:label>
-        <skos:definition xml:lang="en">The type(s) of animals that have been transported in the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly). 
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;pets">
+		<rdfs:label xml:lang="en">pets</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;Species"/>
+		<skos:definition xml:lang="en">The type(s) of animals that have been transported in the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly). 
   
 If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/priceModifier -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/priceModifier">
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/RelativePriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">price modiﬁer</rdfs:label>
-        <skos:definition xml:lang="en">Links a coo:ConfigurationInfo node to information on a choice or component or the combination of multiple choices will affect the regular pricing of the resulting vehicle
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;priceModifier">
+		<rdfs:label xml:lang="en">price modiﬁer</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;RelativePriceSpecification"/>
+		<skos:definition xml:lang="en">Links a coo:ConfigurationInfo node to information on a choice or component or the combination of multiple choices will affect the regular pricing of the resulting vehicle
 
 Note: The use of gr:addOn is in general a better way of modeling surcharges</skos:definition>
 	</owl:ObjectProperty>
@@ -4003,67 +4328,33 @@ Note: The use of gr:addOn is in general a better way of modeling surcharges</sko
 		<rdfs:range rdf:resource="&xsd;boolean"/>
 		<skos:definition xml:lang="en">Indicates whether the vehicle has been used for commercial rental. The legislation in many countries requires this information to be revealed when offering a car for sale. 
 
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/referenceDistance -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/referenceDistance">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">reference distance</rdfs:label>
-        <skos:definition xml:lang="en">The distance to which a vso:fuelConsumption value refers</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/referenceFuelQuantity -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/referenceFuelQuantity">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/FuelQuantity"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">reference fuel quantity</rdfs:label>
-        <skos:definition xml:lang="en">The quantity of fuel to which a vso:fuelEconomy value refers</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/referenceSpeeds -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/referenceSpeeds">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/SpeedInterval"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">reference speeds</rdfs:label>
-        <skos:definition xml:lang="en">The interval of initial and target speed to which a vso:acceleration value refers</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/refersToTrafficPattern -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/refersToTrafficPattern">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/TrafficPattern"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">refers to traffic pattern</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the traffic pattern to which the vso:fuelEconomy or vso:fuelConsumption value refers</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/roofLoad -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/roofLoad">
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">roof load</rdfs:label>
-        <skos:definition>The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.&lt;br/&gt;&lt;br/&gt;
+Note 1: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.
+Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasBusinessFunction gr:Sell).</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-vc;repaired">
+		<rdfs:label xml:lang="en">repaired</rdfs:label>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-vc;DamageOrAccident">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-vc;Vehicle">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+		<skos:definition xml:lang="en">This indicates whether damages resulting from a certain uco:DamageOrAccident (when attached to this type) or all damages (when directly attached to a vso:Vehicle) have been properly repaired. Do not use this propery on a vso:Vehicle if it never had a damage.</skos:definition>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;roofLoad">
+		<rdfs:label xml:lang="en">roof load</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 
@@ -4072,49 +4363,37 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 &lt;li&gt;Note 2: You may also link to a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QualitativeValue&quot;&gt;QualitativeValue&lt;/a&gt; node that provides additional information using &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Note 3: Note that you can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.&lt;/li&gt;
 &lt;/ul&gt;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/rotationalSpeedReference -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/rotationalSpeedReference">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">rotational speed reference</rdfs:label>
-        <skos:definition xml:lang="en">The rotational speed to which a vvo:torque or vso:enginePower value refers
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;rotationalSpeedReference">
+		<rdfs:subPropertyOf rdf:resource="&auto-mo;valueReference"/>
+		<rdfs:label xml:lang="en">rotational speed reference</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-mo;QuantitativeValue"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
+		<skos:definition xml:lang="en">The rotational speed to which a vvo:torque or vso:enginePower value refers
 Typical unit code(s): RPM for revolutions per minute or RPS for revolutions per second</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/scrappageContribution -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/scrappageContribution">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">scrappage contribution</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the scrappage contribution for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/seatingCapacity -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/seatingCapacity">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">seating capacity</rdfs:label>
-        <rdfs:label xml:lang="en">vehicle seating capacity</rdfs:label>
-        <skos:definition>The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;scrappageContribution">
+		<rdfs:label xml:lang="en">scrappage contribution</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the scrappage contribution for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;seatingCapacity">
+		<rdfs:label xml:lang="en">seating capacity</rdfs:label>
+		<rdfs:label xml:lang="en">vehicle seating capacity</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueInteger"/>
+		<skos:definition>The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.
 
 Typical unit code(s): C62 for persons.</skos:definition>
-        <skos:definition>The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.&lt;br/&gt;&lt;br/&gt;
+		<skos:definition>The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): C62 for persons</skos:definition>
 	</owl:ObjectProperty>
@@ -4276,7 +4555,7 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
 		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The torque (turning force) of an engine
 Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch</skos:definition>
-        <skos:definition>The torque (turning force) of the vehicle&apos;s engine.&lt;br/&gt;&lt;br/&gt;
+		<skos:definition>The torque (turning force) of the vehicle&apos;s engine.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch&lt;br/&gt;&lt;br/&gt;
 
@@ -4284,32 +4563,24 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
 &lt;li&gt;Note 1: You can link to information about how the given value has been determined (e.g. reference RPM) using the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt; property.&lt;/li&gt;
 &lt;li&gt;Note 2: You can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.&lt;/li&gt;
 &lt;/ul&gt;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/totalPayable -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/totalPayable">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Financing"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/PriceSpecification"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">total payable</rdfs:label>
-        <skos:definition xml:lang="en">Indicates the total payable for the financing</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/trailerWeight -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/trailerWeight">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">tongue weight</rdfs:label>
-        <rdfs:label xml:lang="en">trailer weight</rdfs:label>
-        <skos:definition>The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR)&lt;br/&gt;&lt;br/&gt;
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;totalPayable">
+		<rdfs:label xml:lang="en">total payable</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Financing"/>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&auto-vc;PriceSpecification"/>
+		<skos:definition xml:lang="en">Indicates the total payable for the financing</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;trailerWeight">
+		<rdfs:label xml:lang="en">tongue weight</rdfs:label>
+		<rdfs:label xml:lang="en">trailer weight</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR)&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 
@@ -4318,7 +4589,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 &lt;li&gt;Note 2: You may also link to a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QualitativeValue&quot;&gt;QualitativeValue&lt;/a&gt; node that provides additional information using &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Note 3: Note that you can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.&lt;/li&gt;
 &lt;/ul&gt;</skos:definition>
-        <skos:definition>The permitted weight of a trailer attached to the vehicle.
+		<skos:definition>The permitted weight of a trailer attached to the vehicle.
 
 Typical unit code(s): KGM for kilogram, LBR for pound
 
@@ -4327,20 +4598,16 @@ Note 1: You can indicate additional information in the name of the QuantitativeV
 Note 2: You may also link to a QualitativeValue node that provides additional information using valueReference. 
 
 Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/transmission -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/transmission">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/TransmissionTypeValue"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">transmission</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Transmission_%28mechanics%29"/>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Transmission_%28mechanics%29"/>
-        <skos:definition xml:lang="en">The type of component used for transmitting the power from a rotating power source to the wheels or propeller(s) (&quot;gearbox&quot; for cars).
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;transmission">
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+		<rdfs:label xml:lang="en">transmission</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:range rdf:resource="&auto-vc;TransmissionTypeValue"/>
+		<rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Transmission_%28mechanics%29"/>
+		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Transmission_%28mechanics%29"/>
+		<skos:definition xml:lang="en">The type of component used for transmitting the power from a rotating power source to the wheels or propeller(s) (&quot;gearbox&quot; for cars).
 
 Use DBPedia resources to indicate the transmission type, if possible. Popular identifiers are
   http://dbpedia.org/resource/Manual_transmission
@@ -4534,19 +4801,15 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 &lt;li&gt;Note 2: You may also link to a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QualitativeValue&quot;&gt;QualitativeValue&lt;/a&gt; node that provides additional information using &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Note 3: Note that you can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.&lt;/li&gt;
 &lt;/ul&gt;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/wheelbase -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/wheelbase">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label xml:lang="en">wheelbase</rdfs:label>
-        <skos:definition>The distance between the centers of the front and rear wheels.&lt;br/&gt;&lt;br/&gt;
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-vc;wheelbase">
+		<rdfs:label xml:lang="en">wheelbase</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&auto-mo;QuantitativeValueFloat"/>
+		<skos:definition>The distance between the centers of the front and rear wheels.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
 	</owl:ObjectProperty>
@@ -4592,3 +4855,4 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
 	</owl:AnnotationProperty>
 
+</rdf:RDF>
