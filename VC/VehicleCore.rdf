@@ -153,6 +153,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:label>value reference</rdfs:label>
     </owl:ObjectProperty>
     
@@ -342,9 +343,6 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/currentOwner">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/owner"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntity"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">current owner</rdfs:label>
         <skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
@@ -380,8 +378,6 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/default">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/availableChoice"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/SpecItemCollection"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">default</rdfs:label>
         <skos:definition xml:lang="en">This property links the default Choice or Component to a Spec Item. 
@@ -882,7 +878,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/luggageCapacitySeatsFolded">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">luggage capacity seats folded</rdfs:label>
         <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats folded
@@ -897,7 +892,6 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/luggageCapacitySeatsUpright">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">luggage capacity seats upright</rdfs:label>
         <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats upright
@@ -1062,8 +1056,6 @@ Typical unit code(s): C62</skos:definition>
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/owner">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/OwnershipInfo"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntity"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">owner</rdfs:label>
@@ -1178,7 +1170,6 @@ Note: The use of gr:addOn is in general a better way of modeling surcharges</sko
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/refersToTrafficPattern">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/TrafficPattern"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">refers to traffic pattern</rdfs:label>
@@ -1211,7 +1202,6 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/rotationalSpeedReference">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">rotational speed reference</rdfs:label>
@@ -1495,8 +1485,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/widthExcludingDoorMirrors">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/width"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">width excluding door mirrors</rdfs:label>
         <skos:definition xml:lang="en">The outer width of the vehicle, excluding door mirrors. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
@@ -1509,8 +1497,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/widthWithDoorsOpen">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/width"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">width with doors open</rdfs:label>
         <skos:definition xml:lang="en">The outer width of the vehicle with the doors open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
@@ -2533,6 +2519,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/validFrom -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/validFrom">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Check"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">valid from</rdfs:label>
@@ -2544,6 +2531,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/validThrough -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/validThrough">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Check"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">valid to</rdfs:label>
@@ -2896,9 +2884,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger">
-        <rdfs:label xml:lang="en">quantitative value tineger</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
     
 
 
