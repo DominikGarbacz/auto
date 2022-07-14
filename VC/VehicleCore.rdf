@@ -205,7 +205,6 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/bodyStyle">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/GenericallyDependentContinuant"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BodyStyleValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
