@@ -153,7 +153,6 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:label>value reference</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1170,6 +1169,7 @@ Note: The use of gr:addOn is in general a better way of modeling surcharges</sko
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/refersToTrafficPattern">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/TrafficPattern"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">refers to traffic pattern</rdfs:label>
@@ -1202,6 +1202,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/rotationalSpeedReference">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">rotational speed reference</rdfs:label>
