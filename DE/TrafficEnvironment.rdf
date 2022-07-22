@@ -103,7 +103,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/hasJunction -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/hasJunction"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/hasJunction">
+        <rdfs:label xml:lang="en">has junction</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -456,7 +458,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/osm_node_id">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/Node"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label>osm node ID</rdfs:label>
+        <rdfs:label>OSM node ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -465,7 +467,7 @@
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/osm_ref">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>osm ref</rdfs:label>
+        <rdfs:label>OSM refrence</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -474,7 +476,7 @@
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/osm_way_id">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label>osm way ID</rdfs:label>
+        <rdfs:label>OSM way ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
