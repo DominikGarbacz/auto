@@ -1,980 +1,1682 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE rdf:RDF [
-	<!ENTITY auto-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
-	<!ENTITY auto-vp "https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/">
-	<!ENTITY cdt "http://w3id.org/lindt/custom_datatypes#">
-	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
-	<!ENTITY dct "http://purl.org/dc/terms/">
-	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
-	<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
-	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
-	<!ENTITY qudt "http://qudt.org/schema/qudt/">
-	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
-	<!ENTITY schema "http://schema.org/">
-	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
-	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
-	<!ENTITY sosa "http://www.w3.org/ns/sosa/">
-	<!ENTITY vann "http://purl.org/vocab/vann/">
-	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
-]>
-<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
-	xmlns="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
-	xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-	xmlns:auto-vp="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
-	xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:dct="http://purl.org/dc/terms/"
-	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-	xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:qudt="http://qudt.org/schema/qudt/"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:schema="http://schema.org/"
-	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-	xmlns:sosa="http://www.w3.org/ns/sosa/"
-	xmlns:vann="http://purl.org/vocab/vann/"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-	
-	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/">
-		<rdfs:label>Vehicle parts ontology (VP)</rdfs:label>
-		<dct:abstract xml:lang="en">This Vehicle Parts Ontology (VP) describes the car&apos;s parts.
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
+     xml:base="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:schema="http://schema.org/"
+     xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:auto-vp="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/">
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+        <dct:abstract xml:lang="en">This Vehicle Parts Ontology (VP) describes the car&apos;s parts.
 
 It contains many classes and properties extracted from:
 - the GENIVI VSS Ontology (VSSO) has been initially created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy (see http://automotive.eurecom.fr/vsso). VSSO, as created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy, is available under the Creative Commons Attribution 4.0 International license; see http://creativecommons.org/licenses/by/4.0/.</dct:abstract>
-		<dct:created rdf:datatype="&xsd;dateTime">2021-08-16T13:55:00</dct:created>
-		<dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-		<sm:fileAbbreviation>auto-vp</sm:fileAbbreviation>
-		<sm:filename>VehicleParts.rdf</sm:filename>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
-	</owl:Ontology>
-	
-	<owl:AnnotationProperty rdf:about="&dc;description">
-	</owl:AnnotationProperty>
-	
-	<rdf:Description rdf:about="&dct;LicenseDocument">
-		<rdfs:label xml:lang="en">license document</rdfs:label>
-	</rdf:Description>
-	
-	<owl:AnnotationProperty rdf:about="&dct;abstract">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;created">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;issued">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;modified">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;fileAbbreviation">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;filename">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;definition">
-	</owl:AnnotationProperty>
-	
-	<rdf:Description rdf:about="&auto-mo;SpecificallyDependentContinuant">
-		<rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
-	</rdf:Description>
-	
-	<owl:Class rdf:about="&auto-vp;ABS">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">ABS</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ABS : Antilock Braking System signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;ADAS">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">ADAS</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS : All Advanced Driver Assist Systems attributes</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Acceleration">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">acceleration</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Vehicle.Acceleration : Spacial acceleration</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;AcceleratorPedal">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">accelerator</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Accelerator : Accelerator signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Airbag">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">airbag</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Airbag : Airbag signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;AltenateO2Sensor">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">alternate O2 sensor</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2Alt.BankX.SensorX : Alternate oxygen sensor</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;AngularVelocity">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">gyro</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Vehicle.AngularVelocity : Spacial rotation</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Axle">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">axle</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle configuration attributes</rdfs:comment>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;BatteryManagement">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">battery management</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.BatteryManagement : Battery Management attributes</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Body">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">body</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body : All body components</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Brake">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Wheel"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">brake</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Brake : Brake signals for wheel</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;BrakePedal">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">brake pedal</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Brake : Brake system signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Cabin">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">cabin</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin : All in-cabin components</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Catalyst">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">catalyst</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.Catalyst : Catalyst signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Chassis">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">chassis</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis : All attributes concerning steering</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;CruiseControl">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">cruise control</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.CruiseControl : Signals from Cruise Control system</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;CurrentDriveCycleStatus">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">drive cycle status</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.DriveCycleStatus : PID 41 - OBD status for the current drive cycle</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;CurrentLocation">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Navigation"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">current location</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.CurrentLocation : The current latitude and longitude of the vehicle.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Cushion">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">cushion</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Cushion : Cushion signals.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;CushionSwitch">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">cushion switch</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Cushion : Cushion switches</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;DestinatonSet">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Navigation"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">destination set</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.DestinatonSet : A navigation has been selected.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;DistanceToObject">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;ObstacleDetection"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">distance to object</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection.DistanceToObject : Distance signals form Obstacle Sensor System</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Door">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">door</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door : All doors</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Drivetrain">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">drivetrain</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain : Drivetrain attributes internal combustion engines</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;ESC">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">ESC</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ESC : Electronic Stability Control System signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;ElectricMotor">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">electric motor</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.ElectricMotor : Electric Motor specific signals.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Engine">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">engine</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.InternalCombustionEngine : Engine-specific attributes</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;ExternalLights">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">external lights</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Lights : All lights</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;FuelCell">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">fuel cell</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelCell : Fuel Cell attributes</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;FuelSystem">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">fuel system</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelSystem : Fuel System attributes</rdfs:comment>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-vp;GPS">
-		<rdfs:label xml:lang="en">GPS</rdfs:label>
-	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vp;HVAC">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">HVAC</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC : Climate control</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;HeadRestraint">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">head restraint</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.HeadRestraint : Head restraint settings</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;HeadRestraintSwitch">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">head restraint switch</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.HeadRestraint : Head restraint switches</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Hood">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">hood</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Hood : Hood status</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Horn">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">horn</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Horn : Horn signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Infotainment">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">infotainment</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment : Infotainment system</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;InternalCombustionEngine">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">internal combustion engine</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;InternalLights">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">internal lights</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights : Interior lights signals and sensors</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;LaneDepartureDetection">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">lane departure detection</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.LaneDepartureDetection : Signals from Land Departure Detection System</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;LocalHVAC">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;HVAC"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">local HVAC</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC.RowX.Left/Right : Climate control</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;LocalLights">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;InternalLights"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">local lights</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights.RowX.Left/Right : Interior lights signals and sensors</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Lumbar">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">lumbar</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Lumbar : Lumbar signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;LumbarSwitch">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">lumbar switch</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Lumbar : Lumbar switches</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;MassageSwitch">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">massage</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Massage : Massage switches</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Media">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Infotainment"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">media</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media : All Media actions</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;MirrorHeating">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Mirrors"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">mirror heating</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors.Left/Right.Heating : Mirror heater signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Mirrors">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">mirrors</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors : All mirrors</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Navigation">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Infotainment"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">navigation</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation : All navigation actions</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;O2Sensor">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">O2 sensor</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2WR.SensorX : Wide range/band oxygen senor 8</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;O2SensorOther">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">O2 sensor other</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2.Bank2.Sensor1 : Oxygen sensor</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;OBD">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">OBD</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.OBD : OBD data.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;OBDStatus">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">status</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.Status : PID 01 - OBD status</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;ObstacleDetection">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">obstacle detection</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection : Signals form Obstacle Sensor System</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;ParkingBrake">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">parking brake</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.ParkingBrake : Parking brake signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Played">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Media"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">played</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media.Played : Collection of signals updated in concert when a new media is played</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Raindetection">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">rain detection</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Raindetection : Rainsensor signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;RearShade">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">rear shade</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearShade : Rear window shade.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;RearviewMirror">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">rearview mirror</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearviewMirror : Rearview mirror</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;ReclineSwitch">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">recline</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Recline : Recline switches</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Seat">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">seat</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat : All seats.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;SeatSwitch">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">switch</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch : Seat switch signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;SideBolster">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">side bolster</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.SideBolster : Side bolster settings</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;SideBolsterSwitch">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">side bolster switch</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.SideBolster : Side bolster switches</rdfs:comment>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-vp;Speedometer">
-		<rdfs:label xml:lang="en">speedometer</rdfs:label>
-	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vp;SteeringWheel">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">steering wheel</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.SteeringWheel : Steering wheel signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;SunRoofShade">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Sunroof"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">sunroof shade</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof.Shade : Sun roof shade status</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Sunroof">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">sunroof</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof : Sun roof status.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;TCS">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">TCS</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.TCS : Traction Control System signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Tire">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Wheel"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">tire</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Tire : Tire signals for wheel</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Transmission">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">transmission</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.Transmission : Transmission-specific attributes</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Trunk">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">trunk</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Trunk : Trunk status</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;VehicleIdentification">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:label xml:lang="en">vehicle identification</rdfs:label>
-		<rdfs:comment xml:lang="en">Attribute.Vehicle.VehicleIdentification : Attributes that identify a vehicle</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;VehiclePart">
-		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
-		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;WasherFluid">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Windshield"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">washer fluid</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.WasherFluid : Front/Rear windshield washer fluid signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Wheel">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Axle"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">wheel</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel : wheel signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Window">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Door"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">window</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Window : Door window status</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;WindowShade">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Door"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">window shade</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Shade : Side window shade</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Windshield">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">windshield</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield : Windshield signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;WindshieldHeating">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Windshield"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">windshield heating</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Heating : Front/Rear windshield heater signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vp;Wiping">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
-				<owl:allValuesFrom rdf:resource="&auto-vp;Windshield"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">wiping</rdfs:label>
-		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Wiping : Front/Rear windshield wiper signals</rdfs:comment>
-	</owl:Class>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
-	</owl:AnnotationProperty>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-16T13:55:00</dct:created>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <sm:fileAbbreviation>auto-vp</sm:fileAbbreviation>
+        <sm:filename>VehicleParts.rdf</sm:filename>
+        <rdfs:label>Vehicle parts ontology (VP)</rdfs:label>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
+    </owl:Ontology>
+    
 
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation"/>
+    
+
+
+    <!-- http://www.omg.org/techprocess/ab/SpecificationMetadata/filename -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/techprocess/ab/SpecificationMetadata/filename"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/hasMaturityLevel -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/hasMaturityLevel"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym -->
+
+    <owl:AnnotationProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/synonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ABS -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ABS">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ABS : Antilock Braking System signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">portion of a service brake system that automatically controls the degree of rotational wheel slip</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ABS</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ABS"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">portion of a service brake system that automatically controls the degree of rotational wheel slip</owl:annotatedTarget>
+        <sm:directSource>49 C.F.R. § 393.5</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS : All Advanced Driver Assist Systems attributes</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">broad range of features, including those that provide warnings and/or momentary intervention, such as forward collision warning (FCW) systems, lane keeping assistance (LKA) systems, and automatic emergency braking (AEB) systems, as well as some convenience features that involve Level 1 driver support features, such as ACC and certain parking assistance features</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ADAS</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">broad range of features, including those that provide warnings and/or momentary intervention, such as forward collision warning (FCW) systems, lane keeping assistance (LKA) systems, and automatic emergency braking (AEB) systems, as well as some convenience features that involve Level 1 driver support features, such as ACC and certain parking assistance features</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section. 5.2</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Acceleration -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Acceleration">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Vehicle.Acceleration : Spacial acceleration</rdfs:comment>
+        <rdfs:label xml:lang="en">acceleration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AcceleratorPedal -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AcceleratorPedal">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Accelerator : Accelerator signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">pedal that controls the amount of gas being fed into the engine and thereby controls the speed of the vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">accelerator</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AcceleratorPedal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">pedal that controls the amount of gas being fed into the engine and thereby controls the speed of the vehicle</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://driversed.com/driving-information/the-vehicle/accelerator/</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Airbag -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Airbag">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Airbag : Airbag signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">inflatable occupant restraint device that is designed to deploy in a side impact crash to help mitigate occupant injury and/or ejection</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">airbag</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Airbag"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">inflatable occupant restraint device that is designed to deploy in a side impact crash to help mitigate occupant injury and/or ejection</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R § 563.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AltenateO2Sensor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AltenateO2Sensor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2Alt.BankX.SensorX : Alternate oxygen sensor</rdfs:comment>
+        <rdfs:label xml:lang="en">alternate O2 sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AngularVelocity -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AngularVelocity">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Vehicle.AngularVelocity : Spacial rotation</rdfs:comment>
+        <rdfs:label xml:lang="en">gyro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Axle -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Axle">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle configuration attributes</rdfs:comment>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">pin or shaft on or with which a wheel or pair of wheels revolves</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">axle</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Axle"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">pin or shaft on or with which a wheel or pair of wheels revolves</owl:annotatedTarget>
+        <sm:directSource>https://www.merriam-webster.com/dictionary/axle</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BatteryManagement -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BatteryManagement">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.BatteryManagement : Battery Management attributes</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">battery management</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BatteryManagement"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body : All body components</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">outer panels that shroud a vehicle&apos;s mechanical and electrical workings</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">body</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">outer panels that shroud a vehicle&apos;s mechanical and electrical workings</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brake -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brake">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wheel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Brake : Brake signals for wheel</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">energy conversion mechanism used to stop, or hold a vehicle stationary</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">brake</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brake"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">energy conversion mechanism used to stop, or hold a vehicle stationary</owl:annotatedTarget>
+        <sm:directSource>49 C.F.R § 393.5</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePedal -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePedal">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Brake : Brake system signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device used to control the brakes of a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">brake pedal</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePedal"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">device used to control the brakes of a vehicle</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin : All in-cabin components</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">interior space of a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">cabin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Catalyst -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Catalyst">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.OBD.Catalyst : Catalyst signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">canister in the exhaust system, usually situated before the muffler, containing a substance that reacts chemically with the exhaust in order to reduce harmful emissions</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">catalyst</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Catalyst"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">canister in the exhaust system, usually situated before the muffler, containing a substance that reacts chemically with the exhaust in order to reduce harmful emissions</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.edmunds.com/glossary/</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis : All attributes concerning steering</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">load-supporting frame of a commercial motor vehicle, exclusive of any appurtenances which might be added to accommodate cargo</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">chassis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">load-supporting frame of a commercial motor vehicle, exclusive of any appurtenances which might be added to accommodate cargo</owl:annotatedTarget>
+        <sm:directSource>49 C.F.R § 393.5</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CruiseControl -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CruiseControl">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.CruiseControl : Signals from Cruise Control system</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that automatically controls the vehicle&apos;s speed when engaged by the driver</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">cruise control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CurrentDriveCycleStatus -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CurrentDriveCycleStatus">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.OBD.DriveCycleStatus : PID 41 - OBD status for the current drive cycle</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">current status of a drive cycle of a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">drive cycle status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CurrentLocation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CurrentLocation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Navigation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.CurrentLocation : The current latitude and longitude of the vehicle.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">current location of a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">current location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cushion -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cushion">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Cushion : Cushion signals.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">anything that is used to soften an impact or absorb shocks</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">cushion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CushionSwitch -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CushionSwitch">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Cushion : Cushion switches</rdfs:comment>
+        <rdfs:label xml:lang="en">cushion switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DestinatonSet -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DestinatonSet">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Navigation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.DestinatonSet : A navigation has been selected.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that sets the destination of a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">destination set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DistanceToObject -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DistanceToObject">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ObstacleDetection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection.DistanceToObject : Distance signals form Obstacle Sensor System</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that tells the driver the distance from the vehicle to a given object</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">distance to object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door : All doors</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">assembly that is installed in an interior or exterior wall; that is movable in a sliding, pivoting, hinged, or revolving manner of movement; and that is used by consumers to produce or close off an opening for use as a means of human passage</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">door</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">assembly that is installed in an interior or exterior wall; that is movable in a sliding, pivoting, hinged, or revolving manner of movement; and that is used by consumers to produce or close off an opening for use as a means of human passage</owl:annotatedTarget>
+        <sm:directSource>16 C.F.R. § 1201.2</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain : Drivetrain attributes internal combustion engines</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system of components that generates power and transmits it to the wheels of a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">drivetrain</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">system of components that generates power and transmits it to the wheels of a vehicle</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ESC -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ESC">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ESC : Electronic Stability Control System signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system that augments vehicle directional stability by applying and adjusting the vehicle brake torques individually to induce a correcting yaw moment to a vehicle, is computer-controlled with the computer using a closed-loop algorithm to limit vehicle oversteer and to limit vehicle understeer and has a means to monitor driver steering inputs</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ESC</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ESC"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">system that augments vehicle directional stability by applying and adjusting the vehicle brake torques individually to induce a correcting yaw moment to a vehicle, is computer-controlled with the computer using a closed-loop algorithm to limit vehicle oversteer and to limit vehicle understeer and has a means to monitor driver steering inputs</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.126</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricMotor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricMotor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.ElectricMotor : Electric Motor specific signals.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">electro-mechanical machine which converts electrical energy into mechanical energy</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">electric motor</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricMotor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">electro-mechanical machine which converts electrical energy into mechanical energy</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://circuitglobe.com/electric-motor.html</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Engine -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Engine">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.InternalCombustionEngine : Engine-specific attributes</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">engine, fuel system, induction system, aftertreatment system, and everything that makes up the system for which an engine manufacturer has received a certificate of conformity</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">engine</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Engine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">engine, fuel system, induction system, aftertreatment system, and everything that makes up the system for which an engine manufacturer has received a certificate of conformity</owl:annotatedTarget>
+        <sm:directSource>40 C.F.R. § 86.010-2</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ExternalLights -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ExternalLights">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Lights : All lights</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">head lights, tail lights, stop lights, back-up lights, turn signals and hazard warning lights</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">external lights</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ExternalLights"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">head lights, tail lights, stop lights, back-up lights, turn signals and hazard warning lights</owl:annotatedTarget>
+        <sm:directSource>20 C.F.R § 500.104</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FuelCell -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FuelCell">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelCell : Fuel Cell attributes</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">electrochemical cell that produces electricity via the non-combustion reaction of a consumable fuel, typically hydrogen</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">fuel cell</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FuelCell"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">electrochemical cell that produces electricity via the non-combustion reaction of a consumable fuel, typically hydrogen</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>40 C.F.R § 86.1803-01</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FuelSystem -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FuelSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelSystem : Fuel System attributes</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">combination of fuel tank, fuel pump, fuel lines, oil injection metering system, and carburetor or fuel injection components, and includes all fuel system vents</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">fuel system</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FuelSystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">combination of fuel tank, fuel pump, fuel lines, oil injection metering system, and carburetor or fuel injection components, and includes all fuel system vents</owl:annotatedTarget>
+        <sm:directSource>40 C.F.R § 86.402-78</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HVAC -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HVAC">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC : Climate control</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system used for moving air between indoor and outdoor areas</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">HVAC</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HVAC"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">system used for moving air between indoor and outdoor areas</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.petro.com/resource-center/what-is-hvac</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadRestraint -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadRestraint">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.HeadRestraint : Head restraint settings</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that limits the rearward displacement of a seated occupant&apos;s head relative to the occupant&apos;s torso</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">head restraint</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadRestraint"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">device that limits the rearward displacement of a seated occupant&apos;s head relative to the occupant&apos;s torso</owl:annotatedTarget>
+        <sm:directSource>49 C.F.R. § 571.202a</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadRestraintSwitch -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadRestraintSwitch">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.HeadRestraint : Head restraint switches</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that allows for modification of the level of height or angle of a head restraint</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">head restraint switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Hood -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Hood">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Hood : Hood status</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">exterior movable body panel forward of the windshield that is used to cover an engine, luggage, storage, or battery compartment</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hood</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Hood"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">exterior movable body panel forward of the windshield that is used to cover an engine, luggage, storage, or battery compartment</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.113</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Horn -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Horn">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Horn : Horn signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device able to give an adequate and reliable warning sign</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">horn</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Horn"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">device able to give an adequate and reliable warning sign</owl:annotatedTarget>
+        <sm:directSource>49 C.F.R. § 393.81</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Infotainment -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Infotainment">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment : Infotainment system</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">vehicle system that combines entertainment and information delivery to drivers and passengers</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">infotainment</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Infotainment"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">vehicle system that combines entertainment and information delivery to drivers and passengers</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.techopedia.com/definition/27778/in-vehicle-infotainment-ivi</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/InternalCombustionEngine -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/InternalCombustionEngine">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:isDefinedBy xml:lang="en">heat engine in which the combustion that generates the heat takes place inside the engine proper instead of in a furnace</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">internal combustion engine</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/InternalCombustionEngine"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">heat engine in which the combustion that generates the heat takes place inside the engine proper instead of in a furnace</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/internal%20combustion%20engine</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/InternalLights -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/InternalLights">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights : Interior lights signals and sensors</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">halogen lamps or light-emitting diodes (LEDs) used to illuminate a vehicle&apos;s interior space</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">internal lights</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/InternalLights"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">halogen lamps or light-emitting diodes (LEDs) used to illuminate a vehicle&apos;s interior space</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LaneDepartureDetection -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LaneDepartureDetection">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.LaneDepartureDetection : Signals from Land Departure Detection System</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system of electronic components designed to warn a driver when a vehicle strays out of its lane</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">lane departure detection</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LaneDepartureDetection"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">system of electronic components designed to warn a driver when a vehicle strays out of its lane</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LocalHVAC -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LocalHVAC">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HVAC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC.RowX.Left/Right : Climate control</rdfs:comment>
+        <rdfs:label xml:lang="en">local HVAC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LocalLights -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LocalLights">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/InternalLights"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights.RowX.Left/Right : Interior lights signals and sensors</rdfs:comment>
+        <rdfs:label xml:lang="en">local lights</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Lumbar -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Lumbar">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Lumbar : Lumbar signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">mechanical or pneumatic device that matches a vehicle&apos;s seat back to the contours of the driver or passenger</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">lumbar</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Lumbar"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">mechanical or pneumatic device that matches a vehicle&apos;s seat back to the contours of the driver or passenger</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.edmunds.com/glossary/</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LumbarSwitch -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LumbarSwitch">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Lumbar : Lumbar switches</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that allows for the adjustment of lumbar support</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">lumbar switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/MassageSwitch -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/MassageSwitch">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Massage : Massage switches</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that allows for the adjustment of moving elements in the seats</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">massage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Media -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Media">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Infotainment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media : All Media actions</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system that allows the driver and passengers to access the media in the vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">media</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/MirrorHeating -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/MirrorHeating">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Mirrors"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors.Left/Right.Heating : Mirror heater signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system that provides heat to the windows</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">mirror heating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Mirrors -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Mirrors">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors : All mirrors</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">polished or smooth surfaces (as of glass) that form images by reflection</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">mirrors</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Mirrors"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">polished or smooth surfaces (as of glass) that form images by reflection</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/mirror</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Navigation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Navigation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Infotainment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation : All navigation actions</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that communicates with global positioning satellites to determine a vehicle&apos;s physical location and plot a course using stored map information</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">navigation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Navigation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">device that communicates with global positioning satellites to determine a vehicle&apos;s physical location and plot a course using stored map information</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/O2Sensor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/O2Sensor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2WR.SensorX : Wide range/band oxygen senor 8</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">sensor mounted in the exhaust stream that relays air/fuel ratio information to the fuel control computer that allows the computer to make adjustments</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">O2 sensor</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/O2Sensor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">sensor mounted in the exhaust stream that relays air/fuel ratio information to the fuel control computer that allows the computer to make adjustments</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/O2SensorOther -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/O2SensorOther">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2.Bank2.Sensor1 : Oxygen sensor</rdfs:comment>
+        <rdfs:label xml:lang="en">O2 sensor other</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBD -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBD">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Signal/Attribute.OBD : OBD data.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">computer-controlled system that identifies malfunctioning or out-of-adjustment components under its control through the display of trouble codes</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">OBD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBDStatus -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBDStatus">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/OBD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.OBD.Status : PID 01 - OBD status</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">current OBD status of a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ObstacleDetection -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ObstacleDetection">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection : Signals form Obstacle Sensor System</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system that detects obstacles in close proximity to the vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">obstacle detection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ParkingBrake -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ParkingBrake">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.ParkingBrake : Parking brake signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">mechanism designed to prevent the movement of a stationary motor vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">parking brake</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ParkingBrake"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">mechanism designed to prevent the movement of a stationary motor vehicle</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.3</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Played -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Played">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Media"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media.Played : Collection of signals updated in concert when a new media is played</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">current media played in the vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">played</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Raindetection -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Raindetection">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Raindetection : Rainsensor signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">feature that detects rain</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">rain detection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/RearShade -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/RearShade">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearShade : Rear window shade.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">shade of a rear window</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">rear shade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/RearviewMirror -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/RearviewMirror">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearviewMirror : Rearview mirror</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">mirror (as in an automobile) that gives a view of the area behind a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">rearview mirror</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/RearviewMirror"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">mirror (as in an automobile) that gives a view of the area behind a vehicle</owl:annotatedTarget>
+        <sm:directSource>https://www.merriam-webster.com/dictionary/rearview%20mirror</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ReclineSwitch -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ReclineSwitch">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Recline : Recline switches</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that allows for reclining a seat</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">recline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat : All seats.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">part of a vehicle that has been designed for someone to sit on</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">seat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch : Seat switch signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that allows for the adjustment of a seat&apos;s position</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideBolster -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideBolster">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.SideBolster : Side bolster settings</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">set of adjustable seat elements on the sides of the seat cushion and/or on the seat back that allow lateral retention of the occupant</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">side bolster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideBolsterSwitch -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideBolsterSwitch">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.SideBolster : Side bolster switches</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that allows for adjustment of the side bolster</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">side bolster switch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringWheel -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringWheel">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Chassis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.SteeringWheel : Steering wheel signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">handwheel by means of which one steers a vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">steering wheel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SunRoofShade -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SunRoofShade">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Sunroof"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof.Shade : Sun roof shade status</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">shade of a sunroof window</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">sunroof shade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Sunroof -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Sunroof">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cabin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof : Sun roof status.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">fixed or operable opening in the roof of a vehicle that is covered with a metal or glass plug</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">sunroof</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Sunroof"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">fixed or operable opening in the roof of a vehicle that is covered with a metal or glass plug</owl:annotatedTarget>
+        <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TCS -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TCS">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ADAS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.TCS : Traction Control System signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">safety feature that regulates wheel spin and prevents loss of control under acceleration by ensuring maximum traction and contact between the tires and the road (by adjusting brake pressure to one or more wheels, closing the throttle, or reducing the fuel supply to at least one or more cylinders)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">TCS</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TCS"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">safety feature that regulates wheel spin and prevents loss of control under acceleration by ensuring maximum traction and contact between the tires and the road (by adjusting brake pressure to one or more wheels, closing the throttle, or reducing the fuel supply to at least one or more cylinders)</owl:annotatedTarget>
+        <dct:source>https://www.edmunds.com/glossary/</dct:source>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wheel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Tire : Tire signals for wheel</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">rubber casing, hoop, and strip or band of all kinds designed and shaped or built to form the tread of or to fit a vehicle wheel</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">tire</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">rubber casing, hoop, and strip or band of all kinds designed and shaped or built to form the tread of or to fit a vehicle wheel</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>26 C.F.R. § 48.4072-1</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Transmission -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Transmission">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Drivetrain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.Transmission : Transmission-specific attributes</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">system in a vehicle that changes gears at different speeds</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">transmission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Trunk -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Trunk">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Trunk : Trunk status</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">space that is intended to be used for carrying luggage or cargo</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">trunk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehicleIdentification -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehicleIdentification">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:comment xml:lang="en">Attribute.Vehicle.VehicleIdentification : Attributes that identify a vehicle</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">series of Arabic numbers and Roman letters that is assigned to a motor vehicle for identification purposes.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">vehicle identification</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehicleIdentification"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">series of Arabic numbers and Roman letters that is assigned to a motor vehicle for identification purposes.</owl:annotatedTarget>
+        <sm:directSource>49 F.C.R. § 565.22</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/MaterialEntity"/>
+        <rdfs:isDefinedBy xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of an automobile truck or bus chassis or body, or other automobile chassis or body, or taxable tractor, any article designed to be attached to or used in connection with such chassis, body, or tractor to add to its utility or ornamentation, and any article the primary use of which is in connection with such chassis, body, or tractor, whether or not essential to its operation or use</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">vehicle part</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of an automobile truck or bus chassis or body, or other automobile chassis or body, or taxable tractor, any article designed to be attached to or used in connection with such chassis, body, or tractor to add to its utility or ornamentation, and any article the primary use of which is in connection with such chassis, body, or tractor, whether or not essential to its operation or use</owl:annotatedTarget>
+        <dct:source>26 C.F.R. § 48.4061(b)-2</dct:source>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WasherFluid -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WasherFluid">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Windshield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.WasherFluid : Front/Rear windshield washer fluid signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">fluid used to wash the car windows and windshields</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">washer fluid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wheel -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wheel">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Axle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel : wheel signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">mechanical device which consists of a non-pneumatic rim and wheel center member and which, in the case of a non-pneumatic tire assembly incorporating a wheel, provides the connection between the tire and the vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">wheel</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wheel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">mechanical device which consists of a non-pneumatic rim and wheel center member and which, in the case of a non-pneumatic tire assembly incorporating a wheel, provides the connection between the tire and the vehicle</owl:annotatedTarget>
+        <sm:directSource>49 C.F.R. § 571.129</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Window -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Window">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Window : Door window status</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">opening in the wall or roof of a building, fitted with glass in a frame to admit light or air and allow people to see out</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">window</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WindowShade -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WindowShade">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Shade : Side window shade</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">piece of stiff cloth or heavy paper that you can pull down over a window as a covering</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">window shade</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WindowShade"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">piece of stiff cloth or heavy paper that you can pull down over a window as a covering</owl:annotatedTarget>
+        <sm:directSource>https://www.collinsdictionary.com/dictionary/english/window-shade</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Windshield -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Windshield">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield : Windshield signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">principal forward facing glazed surface provided for forward vision in operating a motor vehicle</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">windshield</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Windshield"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget xml:lang="en">principal forward facing glazed surface provided for forward vision in operating a motor vehicle</owl:annotatedTarget>
+        <sm:directSource>49 C.F.R. § 393.5</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WindshieldHeating -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WindshieldHeating">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Windshield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Heating : Front/Rear windshield heater signals</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">device that heats the windshield</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">windshield heating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wiping -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wiping">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Windshield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Wiping : Front/Rear windshield wiper signals</rdfs:comment>
+        <rdfs:label xml:lang="en">wiping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/GPS -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/GPS">
+        <rdfs:label xml:lang="en">GPS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Speedometer -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Speedometer">
+        <rdfs:label xml:lang="en">speedometer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
+        <rdfs:label xml:lang="en">license document</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/SpecificallyDependentContinuant">
+        <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
+        <rdfs:isDefinedBy xml:lang="en">device that wipes the windows and windshields</rdfs:isDefinedBy>
+    </rdf:Description>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
