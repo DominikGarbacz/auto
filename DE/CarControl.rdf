@@ -283,8 +283,15 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/Acceleration">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/SpeedProfile"/>
+        <rdfs:isDefinedBy>increase in the speed of something</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">acceleration</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/Acceleration"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedTarget>increase in the speed of something</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://dictionary.cambridge.org/dictionary/english/acceleration</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
     
 
 
