@@ -714,13 +714,13 @@ It contains many classes and properties extracted from:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC : Climate control</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">system used for moving air between indoor and outdoor areas</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">system used for moving air between indoor and outdoor areas along with heating and cooling</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">HVAC</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HVAC"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
-        <owl:annotatedTarget xml:lang="en">system used for moving air between indoor and outdoor areas</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">system used for moving air between indoor and outdoor areas along with heating and cooling</owl:annotatedTarget>
         <fibo-fnd-utl-av:adaptedFrom>https://www.petro.com/resource-center/what-is-hvac</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
@@ -1484,13 +1484,13 @@ It contains many classes and properties extracted from:
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/MaterialEntity"/>
-        <rdfs:isDefinedBy xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of an automobile truck or bus chassis or body, or other automobile chassis or body, or taxable tractor, any article designed to be attached to or used in connection with such chassis, body, or tractor to add to its utility or ornamentation, and any article the primary use of which is in connection with such chassis, body, or tractor, whether or not essential to its operation or use</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">vehicle part</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
-        <owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of an automobile truck or bus chassis or body, or other automobile chassis or body, or taxable tractor, any article designed to be attached to or used in connection with such chassis, body, or tractor to add to its utility or ornamentation, and any article the primary use of which is in connection with such chassis, body, or tractor, whether or not essential to its operation or use</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</owl:annotatedTarget>
         <dct:source>26 C.F.R. § 48.4061(b)-2</dct:source>
     </owl:Axiom>
     
@@ -1524,15 +1524,9 @@ It contains many classes and properties extracted from:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel : wheel signals</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">mechanical device which consists of a non-pneumatic rim and wheel center member and which, in the case of a non-pneumatic tire assembly incorporating a wheel, provides the connection between the tire and the vehicle</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">circular object that revolves on an axle and is fixed below a vehicle or other object to enable it to move easily over the ground</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">wheel</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wheel"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
-        <owl:annotatedTarget xml:lang="en">mechanical device which consists of a non-pneumatic rim and wheel center member and which, in the case of a non-pneumatic tire assembly incorporating a wheel, provides the connection between the tire and the vehicle</owl:annotatedTarget>
-        <sm:directSource>49 C.F.R. § 571.129</sm:directSource>
-    </owl:Axiom>
     
 
 
@@ -1547,7 +1541,7 @@ It contains many classes and properties extracted from:
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Window : Door window status</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">opening in the wall or roof of a building, fitted with glass in a frame to admit light or air and allow people to see out</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">opening in the wall or roof of a vehicle, that lets air and light in, as well as increases the visibility of the surroundings</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">window</rdfs:label>
     </owl:Class>
     

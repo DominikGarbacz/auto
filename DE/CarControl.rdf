@@ -477,14 +477,14 @@ are referred to collectively as object and event detection and response (OEDR).<
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/EnhancingConspicuity">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/TacticalFunction"/>
-        <rdfs:isDefinedBy xml:lang="en">DDT subtask compromising activities which make the vehicle more visible and distinguishable from its surroundings, such as by lightning, sounding the horn, gesturing etc.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">DDT subtask comprising activities which make the vehicle more visible and distinguishable from its surroundings, such as by lightning, sounding the horn, gesturing etc.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">enhancing conspicuity</rdfs:label>
         <fibo-fnd-utl-av:explanatoryNote xml:lang="en">Enhancing conspicuity via lighting, signaling and gesturing, etc.</fibo-fnd-utl-av:explanatoryNote>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/EnhancingConspicuity"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
-        <owl:annotatedTarget xml:lang="en">DDT subtask compromising activities which make the vehicle more visible and distinguishable from its surroundings, such as by lightning, sounding the horn, gesturing etc.</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">DDT subtask comprising activities which make the vehicle more visible and distinguishable from its surroundings, such as by lightning, sounding the horn, gesturing etc.</owl:annotatedTarget>
         <fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 3.10</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
@@ -557,7 +557,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/LaneDepartureWarning">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/Warning"/>
-        <rdfs:isDefinedBy xml:lang="en">notice of the department from the lane</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">notice of the departure from the lane</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">lane departure warning</rdfs:label>
     </owl:Class>
     

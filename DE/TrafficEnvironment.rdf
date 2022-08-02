@@ -864,13 +864,13 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/DirectionalRoadSign">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/RoadSign"/>
-        <rdfs:isDefinedBy xml:lang="en">sign installed by the Local Government or Main Roads WA on public land that advertises the direction to be taken to a service, tourist attraction or a townsite/locality</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">sign installed on public land that advertises the direction to be taken to a service, tourist attraction or a townsite/locality</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">directional road sign</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/DirectionalRoadSign"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
-        <owl:annotatedTarget xml:lang="en">sign installed by the Local Government or Main Roads WA on public land that advertises the direction to be taken to a service, tourist attraction or a townsite/locality</owl:annotatedTarget>
+        <owl:annotatedTarget xml:lang="en">sign installed on public land that advertises the direction to be taken to a service, tourist attraction or a townsite/locality</owl:annotatedTarget>
         <fibo-fnd-utl-av:adaptedFrom>https://www.lawinsider.com/dictionary/directional-signage</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
