@@ -1680,7 +1680,7 @@
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/RoadPart">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/Infrastructure"/>
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/TransportWay"/>
-        <rdfs:isDefinedBy xml:lang="en">segment of the road</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">part of the road</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">road part</rdfs:label>
     </owl:Class>
     
@@ -2121,14 +2121,14 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/UtilityPole">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/Infrastructure"/>
-        <rdfs:isDefinedBy xml:lang="en">tall wooden pole that is used to support telephone wires, electrical wires, etc</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">utility pole</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/UtilityPole"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
-        <owl:annotatedTarget xml:lang="en">tall wooden pole that is used to support telephone wires, electrical wires, etc</owl:annotatedTarget>
-        <sm:directSource>https://www.merriam-webster.com/dictionary/utility%20pole</sm:directSource>
+        <owl:annotatedTarget xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</owl:annotatedTarget>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/utility%20pole</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
