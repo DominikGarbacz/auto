@@ -246,7 +246,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AirBrakeSystem -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AirBrakeSystem">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem"/>
         <rdfs:label xml:lang="en">air brake system</rdfs:label>
         <skos:definition xml:lang="en">system, including an air-over-hydraulic brake subsystem, that uses air as a medium for transmitting pressure or force from the driver control to the service brake but does not include a system that uses compressed air or vacuum only to assist the driver in applying muscular force to hydraulic or mechanical components</skos:definition>
     </owl:Class>
@@ -530,6 +530,40 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BoosterSeat -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BoosterSeat">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Seat"/>
+        <rdfs:label>booster seat</rdfs:label>
+        <skos:definition>backless child restraint system or a belt-positioning seat</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BoosterSeat"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>backless child restraint system or a belt-positioning seat</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.213</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.213</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brace -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brace">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>brace</rdfs:label>
+        <skos:definition>fixed diagonal structural member in an open body vehicle that is used to brace the roll-bar and that connects the roll-bar to the main body of the vehicle structure</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brace"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>fixed diagonal structural member in an open body vehicle that is used to brace the roll-bar and that connects the roll-bar to the main body of the vehicle structure</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.213</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.213</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Bracing -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Bracing">
@@ -588,6 +622,40 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeHose -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeHose">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>brake hose</rdfs:label>
+        <skos:definition>flexible conduit, other than a vacuum tubing connector, manufactured for use in a brake system to transmit or contain the fluid pressure or vacuum used to apply force to a vehicle&apos;s brakes</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeHose"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>flexible conduit, other than a vacuum tubing connector, manufactured for use in a brake system to transmit or contain the fluid pressure or vacuum used to apply force to a vehicle&apos;s brakes</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.106</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.106</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeHoseAssembly -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeHoseAssembly">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeHose"/>
+        <rdfs:label>brake hose assembly</rdfs:label>
+        <skos:definition>brake hose, with or without armor, equipped with end fittings for use in a brake system</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeHoseAssembly"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>brake hose, with or without armor, equipped with end fittings for use in a brake system</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.106</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.106</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePedal -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePedal">
@@ -608,6 +676,49 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">device used to control the brakes of a vehicle</owl:annotatedTarget>
         <sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePowerUnit -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePowerUnit">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>brake power unit</rdfs:label>
+        <skos:definition>device installed in a brake system that provides the energy required to actuate the brakes, either directly or indirectly through an auxiliary device, with the operator action consisting only of modulating the energy application level</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePowerUnit"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>device installed in a brake system that provides the energy required to actuate the brakes, either directly or indirectly through an auxiliary device, with the operator action consisting only of modulating the energy application level</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>brake system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeTubing -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeTubing">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>brake tubing</rdfs:label>
+        <skos:definition>conduit or line used in a brake system to transmit or contain the medium (fluid or vacuum) used to apply the motor vehicle&apos;s brakes</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeTubing"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>conduit or line used in a brake system to transmit or contain the medium (fluid or vacuum) used to apply the motor vehicle&apos;s brakes</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
@@ -1167,6 +1278,23 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricBrakeSystem -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricBrakeSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem"/>
+        <rdfs:label>electric brake system</rdfs:label>
+        <skos:definition>system that uses electric current to actuate the service brake</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricBrakeSystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>system that uses electric current to actuate the service brake</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricMotor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ElectricMotor">
@@ -1208,17 +1336,17 @@ It contains many classes and properties extracted from:
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/EmergencyBrake -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/EmergencyBrakeSystem -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/EmergencyBrake">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brake"/>
-        <rdfs:label xml:lang="en">emergency brake</rdfs:label>
-        <skos:definition xml:lang="en">mechanism designed to stop a motor vehicle after a failure of the service brake system</skos:definition>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/EmergencyBrakeSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem"/>
+        <rdfs:label>emergency brake system</rdfs:label>
+        <skos:definition>mechanism designed to stop a vehicle after a single failure occurs in the service brake system of a part designed to contain compressed air or brake fluid or vacuum</skos:definition>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/EmergencyBrake"/>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/EmergencyBrakeSystem"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget xml:lang="en">mechanism designed to stop a motor vehicle after a failure of the service brake system</owl:annotatedTarget>
+        <owl:annotatedTarget>mechanism designed to stop a vehicle after a single failure occurs in the service brake system of a part designed to contain compressed air or brake fluid or vacuum</owl:annotatedTarget>
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
@@ -1287,6 +1415,15 @@ It contains many classes and properties extracted from:
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Floor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Floor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+        <rdfs:label>floor</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1597,6 +1734,23 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HookLifterContainer -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HookLifterContainer">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CargoEquipment"/>
+        <rdfs:label>hook-lifter container</rdfs:label>
+        <skos:definition>specialized container, primarily used to contain and transport materials in the waste, recycling, construction/demolition and scrap industries, which is used in conjunction with specialized vehicles, in which the container is loaded and unloaded onto a tilt frame body by an articulating hook-arm</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HookLifterContainer"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>specialized container, primarily used to contain and transport materials in the waste, recycling, construction/demolition and scrap industries, which is used in conjunction with specialized vehicles, in which the container is loaded and unloaded onto a tilt frame body by an articulating hook-arm</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Horn -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Horn">
@@ -1878,6 +2032,23 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LoweredFloor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LoweredFloor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Floor"/>
+        <rdfs:label>lowered floor</rdfs:label>
+        <skos:definition>replacement floor on a motor vehicle whose original floor has been removed, in part or in total, and replaced by a floor that is lower than the original floor</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LoweredFloor"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>replacement floor on a motor vehicle whose original floor has been removed, in part or in total, and replaced by a floor that is lower than the original floor</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.214</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.214</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LuggageCompartment -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LuggageCompartment">
@@ -2041,6 +2212,23 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">polished or smooth surfaces (as of glass) that form images by reflection</owl:annotatedTarget>
         <fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/mirror</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ModifiedRoof -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ModifiedRoof">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Roof"/>
+        <rdfs:label>modified roof</rdfs:label>
+        <skos:definition>replacement roof on a motor vehicle whose original roof has been removed, in part or in total</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ModifiedRoof"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>replacement roof on a motor vehicle whose original roof has been removed, in part or in total</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.214</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 5571.214</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
@@ -2417,6 +2605,23 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ReflexReflector -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ReflexReflector">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>reflex reflector</rdfs:label>
+        <skos:definition>device which is used on a vehicle to give an indication to an approaching driver by the reflected light from the lamps on the approaching vehicle</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ReflexReflector"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>device which is used on a vehicle to give an indication to an approaching driver by the reflected light from the lamps on the approaching vehicle</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ReplaceableBulbHeadlamp -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ReplaceableBulbHeadlamp">
@@ -2448,6 +2653,15 @@ It contains many classes and properties extracted from:
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.109</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.109</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Roof -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Roof">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+        <rdfs:label>roof</rdfs:label>
+    </owl:Class>
     
 
 
@@ -2502,6 +2716,23 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatBeltAnchorage -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatBeltAnchorage">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>seat belt anchorage</rdfs:label>
+        <skos:definition>component involved in transferring seat belt loads to the vehicle structure, including, but not limited to, the attachment hardware, but excluding webbing or straps, seat frames, seat pedestals, and the vehicle structure itself, whose failure causes separation of the belt from the vehicle structure</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatBeltAnchorage"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>component involved in transferring seat belt loads to the vehicle structure, including, but not limited to, the attachment hardware, but excluding webbing or straps, seat frames, seat pedestals, and the vehicle structure itself, whose failure causes separation of the belt from the vehicle structure</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.201</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.201</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatBeltMountingStructure -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SeatBeltMountingStructure">
@@ -2533,6 +2764,23 @@ It contains many classes and properties extracted from:
         <rdfs:label xml:lang="en">switch</rdfs:label>
         <skos:definition xml:lang="en">device that allows for the adjustment of a seat&apos;s position</skos:definition>
     </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ServiceBrakeSystem -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ServiceBrakeSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem"/>
+        <rdfs:label>service brake system</rdfs:label>
+        <skos:definition>primary brake system used for slowing and stopping a vehicle</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ServiceBrakeSystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>primary brake system used for slowing and stopping a vehicle</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
     
 
 
@@ -2672,6 +2920,40 @@ It contains many classes and properties extracted from:
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SplitServiceBrakeSystem -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SplitServiceBrakeSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem"/>
+        <rdfs:label>split service brake system</rdfs:label>
+        <skos:definition>brake system consisting of two or more subsystems actuated by a single control designed so that a leakage-type failure of a pressure component in a single subsystem (except structural failure of a housing that is common to two or more subsystems) shall not impair the operation of any other subsystem</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SplitServiceBrakeSystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>brake system consisting of two or more subsystems actuated by a single control designed so that a leakage-type failure of a pressure component in a single subsystem (except structural failure of a housing that is common to two or more subsystems) shall not impair the operation of any other subsystem</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/StartingSystem -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/StartingSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>starting system</rdfs:label>
+        <skos:definition>vehicle system used in conjunction with the key to activate the engine or motor</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/StartingSystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>vehicle system used in conjunction with the key to activate the engine or motor</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.111</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.111</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringColumn -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringColumn">
@@ -2798,15 +3080,15 @@ It contains many classes and properties extracted from:
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SurgeBrake -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SurgeBrakeSystem -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SurgeBrake">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Brake"/>
-        <rdfs:label xml:lang="en">surge brake</rdfs:label>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SurgeBrakeSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem"/>
+        <rdfs:label xml:lang="en">surge brake system</rdfs:label>
         <skos:definition xml:lang="en">self-contained, permanently closed hydraulic brake system for trailers that relies on inertial forces, developed in response to the braking action of the towing vehicle, applied to a hydraulic device mounted on or connected to the tongue of the trailer, to slow down or stop the towed vehicle</skos:definition>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SurgeBrake"/>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SurgeBrakeSystem"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <owl:annotatedTarget xml:lang="en">self-contained, permanently closed hydraulic brake system for trailers that relies on inertial forces, developed in response to the braking action of the towing vehicle, applied to a hydraulic device mounted on or connected to the tongue of the trailer, to slow down or stop the towed vehicle</owl:annotatedTarget>
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
@@ -2852,6 +3134,23 @@ It contains many classes and properties extracted from:
         <owl:annotatedTarget xml:lang="en">lamp used to designate the rear of a motor vehicle</owl:annotatedTarget>
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Throttle -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Throttle">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
+        <rdfs:label>throttle</rdfs:label>
+        <skos:definition>component of the fuel metering device that connects to the driver-operated accelerator control system and that by input from the driver-operated accelerator control system controls the engine speed</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Throttle"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>component of the fuel metering device that connects to the driver-operated accelerator control system and that by input from the driver-operated accelerator control system controls the engine speed</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.213</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.213</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
@@ -3049,6 +3348,23 @@ It contains many classes and properties extracted from:
         <owl:annotatedTarget xml:lang="en">plane or flat mirror with a reflective surface through which the angular height and width of the image of an object is equal to the angular height and width of the object when viewed directly at the same distance except for flaws that do not exceed normal manufacturing tolerances</owl:annotatedTarget>
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.111</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.111</fibo-fnd-utl-av:adaptedFrom>
+    </owl:Axiom>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VacuumBrakeSystem -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VacuumBrakeSystem">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem"/>
+        <rdfs:label>vacuum brake system</rdfs:label>
+        <skos:definition>system that uses a vacuum and atmospheric pressure for transmitting a force from the driver control to the service brake, not including a system that uses vacuum only to assist the driver in applying muscular force to hydraulic or mechanical components</skos:definition>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VacuumBrakeSystem"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>system that uses a vacuum and atmospheric pressure for transmitting a force from the driver control to the service brake, not including a system that uses vacuum only to assist the driver in applying muscular force to hydraulic or mechanical components</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
