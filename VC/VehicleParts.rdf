@@ -436,7 +436,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BatteryManagement"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</owl:annotatedTarget>
-        <fibo-fnd-utl-av:adaptedFrom>device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</fibo-fnd-utl-av:adaptedFrom>
+        <fibo-fnd-utl-av:adaptedFrom>https://www.lawinsider.com/contracts/gVxbRvWuXJi#battery-management</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
@@ -581,6 +581,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">energy conversion mechanism used to stop, or hold a vehicle stationary</owl:annotatedTarget>
         <sm:directSource>49 C.F.R § 393.5</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -865,6 +866,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">load-supporting frame of a commercial motor vehicle, exclusive of any appurtenances which might be added to accommodate cargo</owl:annotatedTarget>
         <sm:directSource>49 C.F.R § 393.5</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -1218,6 +1220,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ESC"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">system that augments vehicle directional stability by applying and adjusting the vehicle brake torques individually to induce a correcting yaw moment to a vehicle, is computer-controlled with the computer using a closed-loop algorithm to limit vehicle oversteer and to limit vehicle understeer and has a means to monitor driver steering inputs</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.126</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.126</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
@@ -1358,7 +1361,8 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ExternalLights"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">head lights, tail lights, stop lights, back-up lights, turn signals and hazard warning lights</owl:annotatedTarget>
-        <sm:directSource>20 C.F.R § 500.104</sm:directSource>
+        <sm:directSource>29 C.F.R § 500.104</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/29/500.104</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -1460,6 +1464,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FuelCell"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">electrochemical cell that produces electricity via the non-combustion reaction of a consumable fuel, typically hydrogen</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/40/86.1803-01</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>40 C.F.R § 86.1803-01</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
@@ -1485,6 +1490,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">combination of fuel tank, fuel pump, fuel lines, oil injection metering system, and carburetor or fuel injection components, and includes all fuel system vents</owl:annotatedTarget>
         <sm:directSource>40 C.F.R § 86.402-78</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/40/86.402-78</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -1567,6 +1573,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">device that limits the rearward displacement of a seated occupant&apos;s head relative to the occupant&apos;s torso</owl:annotatedTarget>
         <sm:directSource>49 C.F.R. § 571.202a</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.202a</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -1717,6 +1724,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">device able to give an adequate and reliable warning sign</owl:annotatedTarget>
         <sm:directSource>49 C.F.R. § 393.81</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.81</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -3144,6 +3152,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">rubber casing, hoop, and strip or band of all kinds designed and shaped or built to form the tread of or to fit a vehicle wheel</owl:annotatedTarget>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/26/48.4072-1</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>26 C.F.R. § 48.4072-1</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
@@ -3316,6 +3325,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">series of Arabic numbers and Roman letters that is assigned to a motor vehicle for identification purposes.</owl:annotatedTarget>
         <sm:directSource>49 F.C.R. § 565.22</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/565.22</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -3333,6 +3343,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</owl:annotatedTarget>
         <dct:source>26 C.F.R. § 48.4061(b)-2</dct:source>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/26/48.4061(b)-2</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -3432,6 +3443,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">principal forward facing glazed surface provided for forward vision in operating a motor vehicle</owl:annotatedTarget>
         <sm:directSource>49 C.F.R. § 393.5</sm:directSource>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
     </owl:Axiom>
     
 
