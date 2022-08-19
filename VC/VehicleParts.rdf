@@ -131,28 +131,8 @@ It contains many classes and properties extracted from:
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Action"/>
         <rdfs:label>used in</rdfs:label>
+        <skos:definition>relates a vehicle part to an operation in which it is used</skos:definition>
     </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/IntendedForOccupantUse -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/IntendedForOccupantUse">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:label>intended for occupant use</rdfs:label>
-    </owl:DatatypeProperty>
     
 
 
@@ -406,7 +386,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BackDoor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BackDoor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
         <rdfs:label xml:lang="en">back door</rdfs:label>
         <skos:definition xml:lang="en">door or door system on the back end of a motor vehicle through which passengers can enter or depart the vehicle or cargo can be loaded or unloaded</skos:definition>
     </owl:Class>
@@ -464,7 +444,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Bead -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Bead">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Carcass"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">bead</rdfs:label>
         <skos:definition xml:lang="en">part of the tire made of steel wires, wrapped or reinforced by ply cords, that is shaped to fit the rim</skos:definition>
     </owl:Class>
@@ -702,6 +682,7 @@ It contains many classes and properties extracted from:
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakeSystem">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label>brake system</rdfs:label>
+        <skos:definition>system, which purpose is to stop or hold a vehicle stationary</skos:definition>
     </owl:Class>
     
 
@@ -771,7 +752,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Carcass -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Carcass">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireStructure"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">carcass</rdfs:label>
         <skos:definition xml:lang="en">tire structure, except for tread and sidewall rubber</skos:definition>
     </owl:Class>
@@ -790,6 +771,7 @@ It contains many classes and properties extracted from:
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/CargoEquipment">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/MaterialEntity"/>
         <rdfs:label xml:lang="en">cargo equipment</rdfs:label>
+        <skos:definition>equipment used for transportation, protection and preservation of cargo</skos:definition>
     </owl:Class>
     
 
@@ -814,7 +796,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Casing -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Casing">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
         <rdfs:label xml:lang="en">casing</rdfs:label>
         <skos:definition xml:lang="en">used tire to which additional tread may be attached for the purpose of retreading</skos:definition>
     </owl:Class>
@@ -958,7 +940,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cord -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Cord">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Carcass"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">cord</rdfs:label>
         <skos:definition xml:lang="en">set of strands forming the plies in the tire</skos:definition>
     </owl:Class>
@@ -1134,7 +1116,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorFrame -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorFrame">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorPart"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">door frame</rdfs:label>
         <skos:definition xml:lang="en">rearmost perimeter structure, including trim but excluding glass, of the forward door and the forwardmost perimeter structure, including trim but excluding glass</skos:definition>
     </owl:Class>
@@ -1148,30 +1130,10 @@ It contains many classes and properties extracted from:
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorPart -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorPart">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
-        <rdfs:label xml:lang="en">door part</rdfs:label>
-        <skos:definition xml:lang="en">part of a door</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
-        <rdfs:label xml:lang="en">door type</rdfs:label>
-        <skos:definition xml:lang="en">type of a door</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoubleDoor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoubleDoor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
         <rdfs:label xml:lang="en">double door</rdfs:label>
         <skos:definition xml:lang="en">system of two doors where the front door or wing door opens first and connects to the rear door or bolted door, which opens second</skos:definition>
     </owl:Class>
@@ -1421,8 +1383,9 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Floor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Floor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label>floor</rdfs:label>
+        <skos:definition>portion of an automobile that is located below the passenger compartment</skos:definition>
     </owl:Class>
     
 
@@ -1430,7 +1393,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FoldingDoor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/FoldingDoor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
         <rdfs:label xml:lang="en">folding door</rdfs:label>
         <skos:definition xml:lang="en">movable barrier, which will close off an entranceway to a bus, multipurpose passenger vehicle or truck, consisting of two or more hinge panels that swing, slide, or rotate and does not have a striker and latch assembly</skos:definition>
     </owl:Class>
@@ -1529,7 +1492,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Groove -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Groove">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tread"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">groove</rdfs:label>
         <skos:definition xml:lang="en">space between two adjacent tread ribs</skos:definition>
     </owl:Class>
@@ -1642,27 +1605,10 @@ It contains many classes and properties extracted from:
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadlampConealmentDevice -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadlampConealmentDevice">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Headlamp"/>
-        <rdfs:label xml:lang="en">headlamp concealment device</rdfs:label>
-        <skos:definition xml:lang="en">device, with its operating system and components, that provides concealment of the headlamp when it is not in use, including a movable headlamp cover and a headlamp that displaces for concealment purposes</skos:definition>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadlampConealmentDevice"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget xml:lang="en">device, with its operating system and components, that provides concealment of the headlamp when it is not in use, including a movable headlamp cover and a headlamp that displaces for concealment purposes</owl:annotatedTarget>
-        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.108</rdfs:seeAlso>
-        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.108</fibo-fnd-utl-av:adaptedFrom>
-    </owl:Axiom>
-    
-
-
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Heater -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Heater">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HVAC"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">heater</rdfs:label>
         <skos:definition xml:lang="en">device or assembly of devices or appliances used to heat the interior of any motor vehicle</skos:definition>
     </owl:Class>
@@ -1696,7 +1642,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Hinge -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Hinge">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorPart"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">hinge</rdfs:label>
         <skos:definition xml:lang="en">device system used to position the door relative to the body structure and control the path of the door swing for passenger ingress and egress</skos:definition>
     </owl:Class>
@@ -1836,7 +1782,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Innerliner -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Innerliner">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Carcass"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">innerliner</rdfs:label>
         <skos:definition xml:lang="en">layer forming the inside surface of a tubeless tire that contains the inflating medium within the tire</skos:definition>
     </owl:Class>
@@ -1969,7 +1915,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Latch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Latch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorPart"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">latch</rdfs:label>
         <skos:definition xml:lang="en">device employed to maintain the door in a closed position relative to the vehicle body with provisions for deliberate release</skos:definition>
     </owl:Class>
@@ -2052,7 +1998,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LuggageCompartment -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/LuggageCompartment">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">luggage compartment</rdfs:label>
         <skos:definition xml:lang="en">space in the vehicle for luggage accommodation, separated from the passenger compartment by the front or rear bulkhead and bounded by a roof, hood or trunk lid, floor, and side walls</skos:definition>
     </owl:Class>
@@ -2277,7 +2223,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/NonPneumaticTire -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/NonPneumaticTire">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
         <rdfs:label xml:lang="en">non-pneumatic tire</rdfs:label>
         <skos:definition xml:lang="en">mechanical device that transmits, either directly or through a wheel or wheel center member, the vertical load and tractive forces from the roadway to the vehicle, generates the tractive forces that provide the directional control of the vehicle and does not rely on the containment of any gas or fluid for providing those functions</skos:definition>
     </owl:Class>
@@ -2414,7 +2360,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PassengerCompartment -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PassengerCompartment">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">passenger compartment</rdfs:label>
         <skos:definition xml:lang="en">space for occupant accommodation that is bounded by the roof, floor, side walls, doors, outside glazing, front bulkhead and rear bulkhead or rear gate, as well as electrical protection barriers provided for protecting the occupants from direct contact with high voltage live parts</skos:definition>
     </owl:Class>
@@ -2448,7 +2394,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
         <rdfs:label xml:lang="en">pneumatic tire</rdfs:label>
         <skos:definition xml:lang="en">mechanical device made of rubber, chemicals, fabric and steel or other materials, which, when mounted on an automotive wheel, provides traction and contains the gas or fluid that sustains the load</skos:definition>
     </owl:Class>
@@ -2642,7 +2588,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Rim -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Rim">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Carcass"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">rim</rdfs:label>
         <skos:definition xml:lang="en">metal support for a tire or a tire and tube assembly upon which the tire beads are seated</skos:definition>
     </owl:Class>
@@ -2659,9 +2605,16 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Roof -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Roof">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Body"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label>roof</rdfs:label>
+        <skos:definition>portion of an automobile that sits above the passenger compartment, protecting the vehicle occupants from sun, wind and other external elements</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Roof"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <owl:annotatedTarget>portion of an automobile that sits above the passenger compartment, protecting the vehicle occupants from sun, wind and other external elements</owl:annotatedTarget>
+        <sm:directSource>https://en.wikipedia.org/wiki/Automobile_roof</sm:directSource>
+    </owl:Axiom>
     
 
 
@@ -2838,7 +2791,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideFrontDoor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideFrontDoor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
         <rdfs:label xml:lang="en">side front door</rdfs:label>
         <skos:definition xml:lang="en">door that, in a side view, has 50 percent or more of its opening area forward of the rearmost point on the driver&apos;s seat back, when the seat back is adjusted to its most vertical and rearward position</skos:definition>
     </owl:Class>
@@ -2855,7 +2808,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideRearDoor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideRearDoor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Door"/>
         <rdfs:label xml:lang="en">side rear door</rdfs:label>
         <skos:definition xml:lang="en">door that, in a side view, has 50 percent or more of its opening area to the rear of the rearmost point on the driver&apos;s seat back, when the driver&apos;s seat is adjusted to its most vertical and rearward position</skos:definition>
     </owl:Class>
@@ -2872,7 +2825,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Sidewall -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Sidewall">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireStructure"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">sidewall</rdfs:label>
         <skos:definition xml:lang="en">portion of a tire between the tread and the bead</skos:definition>
     </owl:Class>
@@ -2957,7 +2910,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringColumn -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringColumn">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringControlSystem"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">steering column</rdfs:label>
         <skos:definition xml:lang="en">structural housing that surrounds a steering shaft</skos:definition>
     </owl:Class>
@@ -2991,7 +2944,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringShaft -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringShaft">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringControlSystem"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">steering shaft</rdfs:label>
         <skos:definition xml:lang="en">component that transmits steering torque from the steering wheel to the steering gear</skos:definition>
     </owl:Class>
@@ -3008,7 +2961,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringWheel -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringWheel">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SteeringControlSystem"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/isPartOf"/>
@@ -3196,26 +3149,6 @@ It contains many classes and properties extracted from:
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireStructure -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireStructure">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
-        <rdfs:label xml:lang="en">tire structure</rdfs:label>
-        <skos:definition xml:lang="en">structure of a tire</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireType -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireType">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
-        <rdfs:label xml:lang="en">tire type</rdfs:label>
-        <skos:definition xml:lang="en">type of a tire</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TowBar -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TowBar">
@@ -3253,7 +3186,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tread -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tread">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TireStructure"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">tread</rdfs:label>
         <skos:definition xml:lang="en">portion of a tire that comes into contact with the road</skos:definition>
     </owl:Class>
@@ -3270,7 +3203,7 @@ It contains many classes and properties extracted from:
     <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TreadRib -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/TreadRib">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tread"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <rdfs:label xml:lang="en">tread rib</rdfs:label>
         <skos:definition xml:lang="en">tread section running circumferentially around a tire</skos:definition>
     </owl:Class>
@@ -3365,23 +3298,6 @@ It contains many classes and properties extracted from:
         <owl:annotatedTarget>system that uses a vacuum and atmospheric pressure for transmitting a force from the driver control to the service brake, not including a system that uses vacuum only to assist the driver in applying muscular force to hydraulic or mechanical components</owl:annotatedTarget>
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
-    </owl:Axiom>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehicleHeadlampAimingDevice -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehicleHeadlampAimingDevice">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/MechanicallyAimableHeadlamp"/>
-        <rdfs:label xml:lang="en">vehicle headlamp aiming device</rdfs:label>
-        <skos:definition xml:lang="en">motor vehicle equipment, installed either on a vehicle or headlamp, which is used for determining the horizontal or vertical aim, or both the vertical and horizontal aim of the headlamp</skos:definition>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehicleHeadlampAimingDevice"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <owl:annotatedTarget xml:lang="en">motor vehicle equipment, installed either on a vehicle or headlamp, which is used for determining the horizontal or vertical aim, or both the vertical and horizontal aim of the headlamp</owl:annotatedTarget>
-        <dct:source>49 C.F.R. § 571.108</dct:source>
-        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.108</rdfs:seeAlso>
     </owl:Axiom>
     
 
@@ -3594,25 +3510,6 @@ It contains many classes and properties extracted from:
     </rdf:Description>
     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/SpecificallyDependentContinuant">
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorFrame"/>
-            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorPart"/>
-            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DoorType"/>
-        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
