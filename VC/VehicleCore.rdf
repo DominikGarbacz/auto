@@ -3453,8 +3453,8 @@ Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceO
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/CoveredFarmVehicle"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <owl:annotatedTarget xml:lang="en">straight truck or articulated vehicle that is registered in a State with a license plate or other designation issued by the State of registration that allows law enforcement officials to identify it as a farm vehicle and used to transport agricultural commodities, livestock, machinery or supplies to or from a farm or ranch</owl:annotatedTarget>
-        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
-        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 

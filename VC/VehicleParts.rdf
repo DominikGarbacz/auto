@@ -2621,7 +2621,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Roof"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <owl:annotatedTarget>portion of an automobile that sits above the passenger compartment, protecting the vehicle occupants from sun, wind and other external elements</owl:annotatedTarget>
-        <sm:directSource>https://en.wikipedia.org/wiki/Automobile_roof</sm:directSource>
+        <fibo-fnd-utl-av:adaptedFrom>https://en.wikipedia.org/wiki/Automobile_roof</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
@@ -3342,8 +3342,8 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
         <owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</owl:annotatedTarget>
-        <dct:source>26 C.F.R. § 48.4061(b)-2</dct:source>
         <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/26/48.4061(b)-2</rdfs:seeAlso>
+        <fibo-fnd-utl-av:adaptedFrom>26 C.F.R. § 48.4061(b)-2</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
 
