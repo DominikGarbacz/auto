@@ -2359,7 +2359,7 @@ It contains many classes and properties extracted from:
         <owl:annotatedSource rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ParkingLamp"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <owl:annotatedTarget xml:lang="en">lamp on both the left and right of the vehicle which shows to the front and is intended to mark the vehicle when parked or serve as a reserve front position indicating system in the event of headlamp failure</owl:annotatedTarget>
-        <rdfs:label>https://www.law.cornell.edu/cfr/text/49/571.108</rdfs:label>
+        <rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.108</rdfs:seeAlso>
         <fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.108</fibo-fnd-utl-av:adaptedFrom>
     </owl:Axiom>
     
