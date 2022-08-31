@@ -748,7 +748,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">incompatible with</rdfs:label>
-        <skos:definition xml:lang="en">Indicates that two Choices or Components are incompatible with each other, independent from other choices</skos:definition>
+        <skos:definition xml:lang="en">indicates that two Choices or Components are incompatible with each other, independent from other choices</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1278,7 +1278,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label xml:lang="en">wheelbase</rdfs:label>
-        <skos:definition>The distance between the centers of the front and rear wheels</skos:definition>
+        <skos:definition>distance between the centers of the front and rear wheels</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1338,17 +1338,13 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValue -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValue">
-        <rdfs:label>has max value</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValue"/>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValue -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValue">
-        <rdfs:label>has min value</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValue"/>
     
 
 
@@ -1717,7 +1713,7 @@ Note: It is recommended to rely on this property only for data originating from 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/hasManufacturerPooling">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="en">has manufacturer pooling</rdfs:label>
-        <skos:definition>This property represents a manufacturers pooling.</skos:definition>
+        <skos:definition>represents a manufacturers pooling.</skos:definition>
     </owl:DatatypeProperty>
     
 
