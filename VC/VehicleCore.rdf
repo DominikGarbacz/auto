@@ -165,14 +165,9 @@ It contains many classes and properties extracted from:
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:comment>There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use &quot;SEC&quot; for seconds and indicate the velocities in the name, or use valueReference with a QuantitativeValue of 0..60 mph or 0..100 km/h to specify the reference speeds</rdfs:comment>
         <rdfs:label xml:lang="en">acceleration time</rdfs:label>
-        <skos:definition>The time needed to accelerate the vehicle from a given start velocity to a given target velocity.&lt;br/&gt;&lt;br/&gt;
-
-Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use &quot;SEC&quot; for seconds and indicate the velocities in the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/name&quot;&gt;name&lt;/a&gt; of the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QuantitativeValue&quot;&gt;QuantitativeValue&lt;/a&gt;, or use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt; with a &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/QuantitativeValue&quot;&gt;QuantitativeValue&lt;/a&gt; of 0..60 mph or 0..100 km/h to specify the reference speeds.&lt;/li&gt;
-&lt;/ul&gt;</skos:definition>
+        <skos:definition>The time needed to accelerate the vehicle from a given start velocity to a given target velocity</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -208,23 +203,19 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BodyStyleValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">body style</rdfs:label>
-        <rdfs:label xml:lang="en">body type</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Car_body_styles"/>
-        <skos:definition>Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).</skos:definition>
-        <skos:definition xml:lang="en">Indicates the design and body style of the vehicle. 
-
-Use DBPedia resources to indicate the features, if possible. Popular identifiers are
+        <rdfs:comment>Use DBPedia resources to indicate the features, if possible. Popular identifiers are
   http://dbpedia.org/resource/Convertible
   http://dbpedia.org/resource/Hatchback
   http://dbpedia.org/resource/Station_wagon
   http://dbpedia.org/resource/Sport_utility_vehicle
   http://dbpedia.org/resource/Roadster
-
-See also http://en.wikipedia.org/wiki/Car_body_styles.
-
-If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:BodyStyleValue.</skos:definition>
+If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:BodyStyleValue.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+        <rdfs:label xml:lang="en">body style</rdfs:label>
+        <rdfs:label xml:lang="en">body type</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Car_body_styles"/>
+        <skos:definition xml:lang="en">Indicates the design and body style of the vehicle</skos:definition>
+        <skos:definition>Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -236,12 +227,9 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:comment>Typical unit code(s): LTR for liters, FTQ for cubic foot/feet</rdfs:comment>
         <rdfs:label xml:lang="en">cargo volume</rdfs:label>
-        <skos:definition>The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.
-
-Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
-
-Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
+        <skos:definition>The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -293,9 +281,7 @@ Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">compatible with</rdfs:label>
-        <skos:definition xml:lang="en">Indicates that two Choices or Components are compatible with each other.
-
-Note: This property is symmetric, i.e., if A is compatible with B, then B is also compatible with A.</skos:definition>
+        <skos:definition xml:lang="en">Indicates that two Choices or Components are compatible with each other</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -330,9 +316,10 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+        <rdfs:comment>For indicating alternative locations to which the seller is willing to bring the car, use gr:availableAtOrFrom attached to the gr:Offering, since those are aspects of the offer, not of the vehicle</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">current location</rdfs:label>
-        <skos:definition xml:lang="en">The current location of the vehicle, i.e. where the car could be tested. For indicating alternative locations to which the seller is willing to bring the car, use gr:availableAtOrFrom attached to the gr:Offering, since those are aspects of the offer, not of the vehicle.</skos:definition>
+        <skos:definition xml:lang="en">The current location of the vehicle, i.e. where the car could be tested</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -376,10 +363,10 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/default">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/availableChoice"/>
+        <rdfs:comment>since it is defined a sub-property of coo:availableChoice, the default choice is automatically part of the available choices</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">default</rdfs:label>
-        <skos:definition xml:lang="en">This property links the default Choice or Component to a Spec Item. 
-Since it is defined a sub-property of coo:availableChoice, the default choice is automatically part of the available choices.</skos:definition>
+        <skos:definition xml:lang="en">This property links the default Choice or Component to a Spec Item</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -391,9 +378,7 @@ Since it is defined a sub-property of coo:availableChoice, the default choice is
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ChoiceOrComponent"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">depends on</rdfs:label>
-        <skos:definition xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components required for that choice  
-
-Note: This property is transitive, i.e., if B is required by A and C and D are required by B, then C and D are also required by A.</skos:definition>
+        <skos:definition xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components required for that choice</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -434,7 +419,6 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
         <rdfs:label xml:lang="en">drive wheel configuration</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Drive_wheel"/>
         <skos:definition xml:lang="en">The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain</skos:definition>
-        <skos:definition>The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -458,12 +442,9 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:comment>Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches</rdfs:comment>
         <rdfs:label xml:lang="en">engine displacement</rdfs:label>
-        <skos:definition>The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. &lt;br/&gt;&lt;br/&gt;
-
-Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches
-* Note 1: You can link to information about how the given value has been determined using the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt; property.
-* Note 2: You can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.</skos:definition>
+        <skos:definition>The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -475,15 +456,9 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:comment>Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)&lt;br/&gt;&lt;br/&gt;</rdfs:comment>
         <rdfs:label xml:lang="en">engine power</rdfs:label>
-        <skos:definition>The power of the vehicle&apos;s engine.
-    Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)&lt;br/&gt;&lt;br/&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Note 1: There are many different ways of measuring an engine&apos;s power. For an overview, see  &lt;a href=&quot;http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes&quot;&gt;http://en.wikipedia.org/wiki/Horsepower#Engine&lt;em&gt;power&lt;/em&gt;test_codes&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Note 2: You can link to information about how the given value has been determined using the &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/valueReference&quot;&gt;valueReference&lt;/a&gt; property.&lt;/li&gt;
-&lt;li&gt;Note 3: You can use &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/minValue&quot;&gt;minValue&lt;/a&gt; and &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; to indicate ranges.&lt;/li&gt;
-&lt;/ul&gt;</skos:definition>
+        <skos:definition>The power of the vehicle&apos;s engine.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -497,18 +472,8 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label>engine type</rdfs:label>
         <rdfs:label xml:lang="en">engine type</rdfs:label>
-        <skos:definition>The type of engine or engines powering the vehicle.</skos:definition>
-        <skos:definition xml:lang="en">The type of engine or engines powering the vehicle. If there are multiple engines, simply attach this property multiple times.
-
-Use DBPedia resources to indicate the engine type. Popular identifiers are
-  http://dbpedia.org/resource/Two-stroke_engine
-  http://dbpedia.org/resource/Four-stroke_engine
-  http://dbpedia.org/resource/Wankel_engine
-  http://dbpedia.org/resource/Electric_motor
-
-If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:EngineTypeValue.</skos:definition>
+        <skos:definition>The type of engine or engines powering the vehicle</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -519,7 +484,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">event information</rdfs:label>
-        <skos:definition xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</skos:definition>
+        <skos:definition xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -547,26 +512,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <rdfs:label xml:lang="en">feature</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Category:Automotive_accessories"/>
         <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Category:Automotive_accessories"/>
-        <skos:definition xml:lang="en">Indicates a built-in feature, accessory, or component of the vehicle.
-
-Use DBPedia resources to indicate the features, if possible. Popular identifiers are
-  http://dbpedia.org/resource/Anti-lock_braking_system
-  http://dbpedia.org/resource/Electronic_stability_control
-  http://dbpedia.org/resource/Armrest
-  http://dbpedia.org/resource/Spoiler_%28automotive%29
-  http://dbpedia.org/resource/CD_Changer
-  http://dbpedia.org/resource/Cup_holder
-  http://dbpedia.org/resource/Tow_hitch
-  http://dbpedia.org/resource/Power_window
-  http://dbpedia.org/resource/Power_steering
-  http://dbpedia.org/resource/Air_conditioner
-  http://dbpedia.org/resource/Child_safety_lock
-  http://dbpedia.org/resource/Parking_sensors
-
-See also http://en.wikipedia.org/wiki/Category:Automotive_accessories.
-
-If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:FeatureValue.</skos:definition>
-        <skos:definition xml:lang="en">This property points to vehicle features in a semi-structured property-value form.</skos:definition>
+        <skos:definition xml:lang="en">Indicates a built-in feature, accessory, or component of the vehicle</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -621,10 +567,9 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:comment>Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).</rdfs:comment>
         <rdfs:label xml:lang="en">fuel capacity</rdfs:label>
-        <skos:definition>The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.&lt;br/&gt;&lt;br/&gt;
-
-Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).</skos:definition>
+        <skos:definition>The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -638,11 +583,7 @@ Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial g
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label xml:lang="en">fuel consumption</rdfs:label>
         <rdfs:label xml:lang="en">fuel efficiency</rdfs:label>
-        <skos:definition>The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).
-
-Note 1: There are unfortunately no standard unit codes for liters per 100 km. Use unitText to indicate the unit of measurement, e.g. L/100 km.
-Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.
-Note 3: Often, the absolute value is useful only when related to driving speed (&quot;at 80 km/h&quot;) or usage pattern (&quot;city traffic&quot;). You can use valueReference to link the value for the fuel consumption to another value.</skos:definition>
+        <skos:definition>The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)</skos:definition>
         <skos:definition>The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).
 
 Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use unitText to indicate the unit of measurement, e.g. mpg or km/L.
@@ -662,15 +603,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">fuel type</rdfs:label>
-        <skos:definition xml:lang="en">The type of fuel suitable for the engine or engines of the vehicle.
-
-Use DBPedia resources to indicate the fuel type. Popular identifiers are
-  http://dbpedia.org/resource/Gasoline
-  http://dbpedia.org/resource/Diesel
-  http://dbpedia.org/resource/Biodiesel
-  http://dbpedia.org/resource/Kerosene
-
-For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
+        <skos:definition xml:lang="en">The type of fuel suitable for the engine or engines of the vehicle</skos:definition>
         <skos:definition>The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.</skos:definition>
     </owl:ObjectProperty>
     
@@ -768,10 +701,10 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/height">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
+        <rdfs:comment>Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">height</rdfs:label>
-        <skos:definition xml:lang="en">The outer height of the vehicle. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
-Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
+        <skos:definition xml:lang="en">The outer height of the vehicle</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -781,11 +714,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/heightOpenTailgate">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+        <rdfs:comment>Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">height open bonnet</rdfs:label>
         <rdfs:label xml:lang="en">height open tailgate</rdfs:label>
-        <skos:definition xml:lang="en">The outer height of the vehicle with the tailgate open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
-Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
+        <skos:definition xml:lang="en">The outer height of the vehicle with the tailgate open</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -879,10 +811,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">luggage capacity seats folded</rdfs:label>
-        <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats folded
-Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
-  
-Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
+        <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats folded</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -893,10 +822,7 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/cargoVolume"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">luggage capacity seats upright</rdfs:label>
-        <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats upright
-Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
-  
-Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
+        <skos:definition xml:lang="en">The available volume for cargo or luggage with the seats upright</skos:definition>
     </owl:ObjectProperty>
     
 
