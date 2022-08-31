@@ -5878,7 +5878,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/AllWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/DriveWheelConfigurationValue"/>
         <rdfs:label xml:lang="en">all-wheel drive</rdfs:label>
-        <skos:definition xml:lang="en">All-wheel Drive is a transmission layout where the engine drives all four wheels.</skos:definition>
+        <skos:definition xml:lang="en">transmission layout where the engine drives all four wheels</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5889,7 +5889,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntityType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">authorized dealer</rdfs:label>
-        <skos:definition xml:lang="en">An authorized dealer of the manufacturer of the respective vehicle</skos:definition>
+        <skos:definition xml:lang="en">authorized dealer of the manufacturer of the respective vehicle</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5902,7 +5902,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">4 X 4</rdfs:label>
-        <skos:definition xml:lang="en">Four-by-Four Vehicle, VW ID: 6</skos:definition>
+        <skos:definition xml:lang="en">four-by-four vehicle, VW ID: 6</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5915,7 +5915,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">cabriolet</rdfs:label>
-        <skos:definition xml:lang="en">Cabriolet, VW ID: 4</skos:definition>
+        <skos:definition xml:lang="en">cabriolet, VW ID: 4</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5928,7 +5928,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">coupe</rdfs:label>
-        <skos:definition xml:lang="en">Coupe, VW ID: 7</skos:definition>
+        <skos:definition xml:lang="en">coupe, VW ID: 7</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5941,7 +5941,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">estate</rdfs:label>
-        <skos:definition xml:lang="en">Estate, VW ID: 3</skos:definition>
+        <skos:definition xml:lang="en">estate, VW ID: 3</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5954,7 +5954,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">hatchback</rdfs:label>
-        <skos:definition xml:lang="en">Hatchback, VW ID: 1</skos:definition>
+        <skos:definition xml:lang="en">hatchback, VW ID: 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5967,7 +5967,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">MPV</rdfs:label>
-        <skos:definition xml:lang="en">Multi-purpose Vehicle, VW ID: 5</skos:definition>
+        <skos:definition xml:lang="en">multi-purpose Vehicle, VW ID: 5</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5980,7 +5980,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">saloon</rdfs:label>
-        <skos:definition xml:lang="en">Saloon, VW ID: 2</skos:definition>
+        <skos:definition xml:lang="en">saloon, VW ID: 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -5992,8 +5992,8 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <hasID>0</hasID>
         <dct:source>vso:BodyStyleValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">unspecified</rdfs:label>
-        <skos:definition xml:lang="en">Unspecified, VW ID: 0</skos:definition>
+        <rdfs:label xml:lang="en">unspecified body style</rdfs:label>
+        <skos:definition xml:lang="en">unspecified, VW ID: 0</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6004,7 +6004,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/CarUsageType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">business</rdfs:label>
-        <skos:definition xml:lang="en">The usage of a vehicle for general business purposes, i.e. excluding usages like as a taxi, rental car, or driving instructions.</skos:definition>
+        <skos:definition xml:lang="en">usage of a vehicle for general business purposes, i.e. excluding usages like as a taxi, rental car, or driving instructions</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6015,7 +6015,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/CarUsageType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">car sharing</rdfs:label>
-        <skos:definition xml:lang="en">The usage of a vehicle for car sharing networks</skos:definition>
+        <skos:definition xml:lang="en">usage of a vehicle for car sharing networks</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6026,7 +6026,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ParkingType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">carport</rdfs:label>
-        <skos:definition xml:lang="en">The parking of a vehicle under a protective roof, e.g. in a carport</skos:definition>
+        <skos:definition xml:lang="en">parking of a vehicle under a protective roof, e.g. in a carport</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6038,7 +6038,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TrafficPattern</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">combined</rdfs:label>
-        <skos:definition xml:lang="en">Combined usage as a traffic pattern</skos:definition>
+        <skos:definition xml:lang="en">combined usage as a traffic pattern</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6051,7 +6051,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:FuelTypeValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">diesel</rdfs:label>
-        <skos:definition xml:lang="en">Diesel, VW ID: 2</skos:definition>
+        <skos:definition xml:lang="en">diesel, VW ID: 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6063,7 +6063,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>driving school vehicle usage</rdfs:label>
-        <skos:definition>Indicates the usage of the vehicle for driving school.</skos:definition>
+        <skos:definition>indicates the usage of the vehicle for driving school</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6075,7 +6075,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:EmissionStandardValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">Euro 1</rdfs:label>
-        <skos:definition xml:lang="en">The emission standard EURO 1</skos:definition>
+        <skos:definition xml:lang="en">emission standard EURO 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6087,7 +6087,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:EmissionStandardValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">Euro 2</rdfs:label>
-        <skos:definition xml:lang="en">The emission standard EURO 2</skos:definition>
+        <skos:definition xml:lang="en">emission standard EURO 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6099,7 +6099,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:EmissionStandardValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">Euro 3</rdfs:label>
-        <skos:definition xml:lang="en">The emission standard EURO 3</skos:definition>
+        <skos:definition xml:lang="en">emission standard EURO 3</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6111,7 +6111,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:EmissionStandardValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">Euro 4</rdfs:label>
-        <skos:definition xml:lang="en">The emission standard EURO 4</skos:definition>
+        <skos:definition xml:lang="en">emission standard EURO 4</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6123,7 +6123,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TrafficPattern</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">extra urban</rdfs:label>
-        <skos:definition xml:lang="en">Extra urban as a traffic pattern</skos:definition>
+        <skos:definition xml:lang="en">extra urban as a traffic pattern</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6133,7 +6133,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/FourWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/DriveWheelConfigurationValue"/>
         <rdfs:label xml:lang="en">four-wheel drive</rdfs:label>
-        <skos:definition xml:lang="en">Four-wheel Drive is a transmission layout where the engine primarily drives two wheels with a part-time four-wheel drive capability.</skos:definition>
+        <skos:definition xml:lang="en">transmission layout where the engine primarily drives two wheels with a part-time four-wheel drive capability</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6143,7 +6143,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/FrontWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/DriveWheelConfigurationValue"/>
         <rdfs:label xml:lang="en">front-wheel drive</rdfs:label>
-        <skos:definition xml:lang="en">Front-wheel drive is a transmission layout where the engine drives the front wheels.</skos:definition>
+        <skos:definition xml:lang="en">transmission layout where the engine drives the front wheels</skos:definition>
         <fibo-fnd-utl-av:synonym xml:lang="en">FWD</fibo-fnd-utl-av:synonym>
     </owl:NamedIndividual>
     
@@ -6155,7 +6155,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ParkingType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">garage</rdfs:label>
-        <skos:definition xml:lang="en">The parking of a vehicle in a closed garage</skos:definition>
+        <skos:definition xml:lang="en">parking of a vehicle in a closed garage</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6168,7 +6168,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:GearboxTypeValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">automatic</rdfs:label>
-        <skos:definition xml:lang="en">Automatic gearbox, VW ID: 2</skos:definition>
+        <skos:definition xml:lang="en">automatic gearbox, VW ID: 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6194,7 +6194,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:GearboxTypeValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">manual</rdfs:label>
-        <skos:definition xml:lang="en">Manual gearbox, VW ID: 1</skos:definition>
+        <skos:definition xml:lang="en">manual gearbox, VW ID: 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6207,7 +6207,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:FuelTypeValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">hybrid</rdfs:label>
-        <skos:definition xml:lang="en">Hybrid, VW ID: 3</skos:definition>
+        <skos:definition xml:lang="en">hybrid, VW ID: 3</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6218,7 +6218,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/BusinessEntityType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">independent dealer</rdfs:label>
-        <skos:definition xml:lang="en">An independent dealer</skos:definition>
+        <skos:definition xml:lang="en">independent dealer</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6228,7 +6228,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/LeftHandDriving">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/SteeringPositionValue"/>
         <rdfs:label xml:lang="en">left hand drive</rdfs:label>
-        <skos:definition xml:lang="en">The steering position is on the left side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the right side of the road.</skos:definition>
+        <skos:definition xml:lang="en">steering position is on the left side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the right side of the road.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6251,7 +6251,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vso:FuelTypeValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">petrol</rdfs:label>
-        <skos:definition xml:lang="en">Petrol, VW ID: 1</skos:definition>
+        <skos:definition xml:lang="en">petrol, VW ID: 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6262,7 +6262,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/CarUsageType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">private</rdfs:label>
-        <skos:definition xml:lang="en">The usage of a vehicle soleley for private purposes</skos:definition>
+        <skos:definition xml:lang="en">usage of a vehicle soleley for private purposes</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6272,7 +6272,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/RearWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/DriveWheelConfigurationValue"/>
         <rdfs:label xml:lang="en">rear-wheel drive</rdfs:label>
-        <skos:definition xml:lang="en">Rear-wheel drive is a transmission layout where the engine drives the rear wheels.</skos:definition>
+        <skos:definition xml:lang="en">rear-wheel drive is a transmission layout where the engine drives the rear wheels</skos:definition>
         <fibo-fnd-utl-av:synonym xml:lang="en">RWD</fibo-fnd-utl-av:synonym>
     </owl:NamedIndividual>
     
@@ -6285,7 +6285,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>rental vehicle usage</rdfs:label>
-        <skos:definition>Indicates the usage of the vehicle as a rental car.</skos:definition>
+        <skos:definition>indicates the usage of the vehicle as a rental car</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6295,7 +6295,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/RightHandDriving">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/SteeringPositionValue"/>
         <rdfs:label xml:lang="en">right hand drive</rdfs:label>
-        <skos:definition xml:lang="en">The steering position is on the right side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the left side of the road.</skos:definition>
+        <skos:definition xml:lang="en">steering position is on the right side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the left side of the road</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6306,7 +6306,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/ParkingType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">street</rdfs:label>
-        <skos:definition xml:lang="en">The parking of a vehicle on a public or private street</skos:definition>
+        <skos:definition xml:lang="en">parking of a vehicle on a public or private street</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6320,7 +6320,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">4 speed auto</rdfs:label>
-        <skos:definition xml:lang="en">4 Speed auto. VW ID: 1</skos:definition>
+        <skos:definition xml:lang="en">4 speed auto. VW ID: 1</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6334,7 +6334,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">5 speed auto DSG</rdfs:label>
-        <skos:definition xml:lang="en">5 Speed auto DSG, VW ID: 8</skos:definition>
+        <skos:definition xml:lang="en">5 speed auto DSG, VW ID: 8</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6348,7 +6348,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">5 speed auto tiptronic</rdfs:label>
-        <skos:definition xml:lang="en">5 Speed auto tiptronic, VW ID: 3</skos:definition>
+        <skos:definition xml:lang="en">5 speed auto tiptronic, VW ID: 3</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6362,7 +6362,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueManual</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">5 speed manual</rdfs:label>
-        <skos:definition xml:lang="en">5 Speed manual, VW ID: 2</skos:definition>
+        <skos:definition xml:lang="en">5 speed manual, VW ID: 2</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6376,7 +6376,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">6 speed auto</rdfs:label>
-        <skos:definition xml:lang="en">6 Speed auto, VW ID: 5</skos:definition>
+        <skos:definition xml:lang="en">6 speed auto, VW ID: 5</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6390,7 +6390,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">6 speed auto DSG</rdfs:label>
-        <skos:definition xml:lang="en">6 Speed auto DSG, VW ID: 6</skos:definition>
+        <skos:definition xml:lang="en">6 speed auto DSG, VW ID: 6</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6404,7 +6404,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">6 speed auto tiptronic</rdfs:label>
-        <skos:definition xml:lang="en">6 Speed auto tiptronic, VW ID: 7</skos:definition>
+        <skos:definition xml:lang="en">6 speed auto tiptronic, VW ID: 7</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6418,7 +6418,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueManual</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">6 speed manual</rdfs:label>
-        <skos:definition xml:lang="en">6 Speed manual, VW ID: 4</skos:definition>
+        <skos:definition xml:lang="en">6 speed manual, VW ID: 4</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6432,7 +6432,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">7 speed auto DSG</rdfs:label>
-        <skos:definition xml:lang="en">7 Speed auto DSG, VW ID: 9</skos:definition>
+        <skos:definition xml:lang="en">7 speed auto DSG, VW ID: 9</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6446,7 +6446,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TransmissionTypeValueAutomatic</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">8 speed auto</rdfs:label>
-        <skos:definition xml:lang="en">8 Speed auto, VW ID: 10</skos:definition>
+        <skos:definition xml:lang="en">8 speed auto, VW ID: 10</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6459,8 +6459,8 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <hasID>0</hasID>
         <dct:source>vso:TransmissionTypeValue</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">unspecified</rdfs:label>
-        <skos:definition xml:lang="en">Unspecified, VW ID: 0</skos:definition>
+        <rdfs:label xml:lang="en">unspecified transmission type</rdfs:label>
+        <skos:definition xml:lang="en">unspecified, VW ID: 0</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6472,7 +6472,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>taxi vehicle usage</rdfs:label>
-        <skos:definition>Indicates the usage of the car as a taxi.</skos:definition>
+        <skos:definition>indicates the usage of the car as a taxi</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6483,7 +6483,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/FuelTypeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">two-stroke mixture</rdfs:label>
-        <skos:definition xml:lang="en">A pre-mixed fuel-oil mixture</skos:definition>
+        <skos:definition xml:lang="en">pre-mixed fuel-oil mixture</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6495,7 +6495,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <dct:source>vvo:TrafficPattern</dct:source>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">urban</rdfs:label>
-        <skos:definition xml:lang="en">Urban usage as a traffic pattern</skos:definition>
+        <skos:definition xml:lang="en">urban usage as a traffic pattern</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6509,7 +6509,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <auto-mo:hasUnitOfMeasurement>KMH</auto-mo:hasUnitOfMeasurement>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">0 to 100KMH</rdfs:label>
-        <skos:definition xml:lang="en">The speed interval from 0 to 100 km/h</skos:definition>
+        <skos:definition xml:lang="en">speed interval from 0 to 100 km/h</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6523,7 +6523,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <auto-mo:hasUnitOfMeasurement>HM</auto-mo:hasUnitOfMeasurement>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">0 to 60MPH</rdfs:label>
-        <skos:definition xml:lang="en">The speed interval from 0 to 60 mph</skos:definition>
+        <skos:definition xml:lang="en">speed interval from 0 to 60 mph</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6535,7 +6535,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <auto-mo:hasUnitOfMeasurement>GLI</auto-mo:hasUnitOfMeasurement>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">1GLI</rdfs:label>
-        <skos:definition xml:lang="en">The fuel quantity of 1 British (imperial) gallon</skos:definition>
+        <skos:definition xml:lang="en">fuel quantity of 1 British (imperial) gallon</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6547,7 +6547,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <auto-mo:hasUnitOfMeasurement>GLL</auto-mo:hasUnitOfMeasurement>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">1GLL</rdfs:label>
-        <skos:definition xml:lang="en">The fuel quantity of 1 US gallon</skos:definition>
+        <skos:definition xml:lang="en">fuel quantity of 1 US gallon</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -6559,7 +6559,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <auto-mo:hasUnitOfMeasurement>LTR</auto-mo:hasUnitOfMeasurement>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">1LTR</rdfs:label>
-        <skos:definition xml:lang="en">The fuel quantity of 1 liter</skos:definition>
+        <skos:definition xml:lang="en">fuel quantity of 1 liter</skos:definition>
     </owl:NamedIndividual>
 </rdf:RDF>
 
